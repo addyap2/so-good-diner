@@ -156,6 +156,8 @@ em { font-style: italic; }
   min-height: clamp(480px, 78svh, 720px);
   display: flex;
   align-items: flex-end;
+  /* Reserve space for the fixed header so bottom-anchored copy can't tuck under it */
+  padding-top: clamp(4.75rem, 9vh, 6.5rem);
   overflow: hidden;
   isolation: isolate;
   background: #0c0906;
