@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>So Good Diner — Burgers, Kumpir & Snacking à Fréjus</title>
+  <meta name="description" content="So Good Diner à Fréjus : burgers gourmands, kumpir, box à partager et snacking maison. Pain artisanal du boulanger, viande fraîche du boucher. 65 Rue du Général de Gaulle, 83600 Fréjus." />
+
+  <meta property="og:title" content="So Good Diner — Fréjus" />
+  <meta property="og:description" content="Burgers, kumpir, box & snacking maison. Pain artisanal, viande fraîche. 65 Rue du Général de Gaulle, 83600 Fréjus." />
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:image" content="assets/img/hero.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Yellowtail&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="top">
+    <a href="#top" class="brand" aria-label="So Good Diner — accueil">
+      <span class="brand-script">sogood</span>
+      <span class="brand-sub">DINER</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#carte">La Carte</a>
+      <a href="#qualite">Notre maison</a>
+      <a href="#avis">Avis</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:+33" class="btn btn-ghost nav-cta">Commander</a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-media">
+      <video autoplay muted loop playsinline poster="assets/img/hero.jpg">
+        <source src="assets/video/clip-2.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="eyebrow">Fréjus · 83600</p>
+      <h1 class="hero-logo">
+        <span class="hero-script">sogood</span>
+        <span class="hero-sub">DINER</span>
+      </h1>
+      <p class="hero-tagline">
+        Burgers gourmands, kumpir généreux &amp; snacking maison.<br />
+        <em>Pain artisanal du boulanger. Viande fraîche du boucher.</em>
+      </p>
+      <p class="hero-placeholder">[Votre accroche à compléter — ajoutez ici votre phrase d'accueil.]</p>
+      <div class="hero-actions">
+        <a href="#carte" class="btn btn-primary">Découvrir la carte</a>
+        <a href="#contact" class="btn btn-ghost">Nous trouver</a>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span></span> Faites défiler
+    </div>
+  </section>
+
+  <!-- ===== QUALITÉ / MAISON ===== -->
+  <section class="quality" id="qualite">
+    <div class="quality-inner">
+      <p class="section-eyebrow">Notre maison</p>
+      <h2 class="section-title">Fait maison, avec des produits vrais</h2>
+      <p class="section-lead">
+        [Texte à compléter — présentez ici l'histoire du So Good Diner, votre philosophie
+        et ce qui rend l'endroit unique.]
+      </p>
+      <div class="quality-grid">
+        <article class="quality-card">
+          <span class="quality-icon">🥖</span>
+          <h3>Pain artisanal</h3>
+          <p>Le pain vient directement du boulanger, frais chaque jour.</p>
+        </article>
+        <article class="quality-card">
+          <span class="quality-icon">🥩</span>
+          <h3>Viande du boucher</h3>
+          <p>Une viande fraîche, sélectionnée chez le boucher et travaillée sur place.</p>
+        </article>
+        <article class="quality-card">
+          <span class="quality-icon">🧑‍🍳</span>
+          <h3>Préparé devant vous</h3>
+          <p>On voit les cuistots préparer les steaks. Un gage de qualité assumé.</p>
+        </article>
+        <article class="quality-card">
+          <span class="quality-icon">🫙</span>
+          <h3>Sauces maison</h3>
+          <p>Des sauces maison qui font toute la différence, à chaque bouchée.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CARTE ===== -->
+  <section class="menu" id="carte">
+    <div class="menu-head">
+      <p class="section-eyebrow">La Carte</p>
+      <h2 class="section-title">Sandwichs · Boxs · Snacking · Desserts</h2>
+      <div class="drinks-band">
+        <span>Soda <b>2,00€</b></span>
+        <span>Eau <b>1,50€</b></span>
+        <span>Eau pétillante <b>2,00€</b></span>
+      </div>
+    </div>
+
+    <!-- Filtres -->
+    <nav class="menu-filters" aria-label="Catégories de la carte">
+      <button class="chip is-active" data-filter="all">Tout</button>
+      <button class="chip" data-filter="sandwichs">Sandwichs &amp; Paninis</button>
+      <button class="chip" data-filter="burgers">Burgers &amp; Wraps</button>
+      <button class="chip" data-filter="kumpir">Kumpir</button>
+      <button class="chip" data-filter="boxs">Boxs</button>
+      <button class="chip" data-filter="snacking">Snacking</button>
+      <button class="chip" data-filter="menus">Menus</button>
+      <button class="chip" data-filter="desserts">Desserts</button>
+    </nav>
+
+    <div class="menu-groups">
+
+      <!-- SANDWICHS & PANINIS -->
+      <section class="menu-group" data-cat="sandwichs">
+        <h3 class="group-title">Sandwichs &amp; Paninis</h3>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Philly Cheese Steak ou Poulet</span><span class="mi-price">14,50€ <em>/ menu 17,50€</em></span></div>
+            <p class="mi-desc">Pain sous-marin, bœuf/poulet, poivrons, oignons, fromage, salade, mayonnaise, champignons frais.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Américain Simple</span><span class="mi-price">10,00€ <em>/ menu 12,00€</em></span></div>
+            <p class="mi-desc">Baguette, 2 steaks de 80g, frites, cheddar, salade, tomate, oignons, sauce au choix.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Hot Dog Frit</span><span class="mi-price">9,90€ <em>/ menu 12,90€</em></span></div>
+            <p class="mi-desc">Pain, saucisse frite, cheddar, oignons crispy, ketchup / moutarde américaine.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Panini Jambon</span><span class="mi-price">6,50€</span></div>
+            <p class="mi-desc">Pain panini, jambon, fromage.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Panini 4 Fromages</span><span class="mi-price">9,00€</span></div>
+            <p class="mi-desc">Pain panini, mélange de quatre fromages fondants.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Panini Poulet ou Kebab</span><span class="mi-price">8,50€</span></div>
+            <p class="mi-desc">Pain panini, poulet ou kebab, tomate, mozzarella.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- BURGERS & WRAPS -->
+      <section class="menu-group" data-cat="burgers">
+        <h3 class="group-title">Burgers &amp; Wraps <span class="group-note">Menu : frites + boisson</span></h3>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Double Cheese</span><span class="mi-price">8,50€ <em>/ menu 11,50€</em></span></div>
+            <p class="mi-desc">2 steaks, 2 cheddar, cornichons, ketchup, mayonnaise.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Le Frenchie</span><span class="mi-price">13,90€ <em>/ menu 16,90€</em></span></div>
+            <p class="mi-desc">Steak 100g, œuf, salade, tomate, raclette, bacon, poivrons.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">So Good 150</span><span class="mi-price">13,90€ <em>/ menu 16,90€</em></span></div>
+            <p class="mi-desc">Steak 150g, salade, tomate, oignons rouges, 2 cheddar.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Le Master Bœuf ou Poulet</span><span class="mi-price">16,80€ <em>/ menu 19,80€</em></span></div>
+            <p class="mi-desc">2 steaks 100g ou 2 filets de poulet panés, double cheddar, raclette, rösti, oignons caramélisés.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Le Veggie</span><span class="mi-price">14,40€ <em>/ menu 17,40€</em></span></div>
+            <p class="mi-desc">Rösti, cheddar, salade, tomate, oignons caramélisés.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">So Good Chicken ou Fish</span><span class="mi-price">10,00€ <em>/ menu 13,00€</em></span></div>
+            <p class="mi-desc">Colin pané ou filet de poulet pané, cheddar, salade, sauce fish.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Wrap Américain</span><span class="mi-price">10,90€ <em>/ menu 13,90€</em></span></div>
+            <p class="mi-desc">Poulet pané, cheddar, salade, tomate, oignons, frites, sauce BBQ.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Wrap Chèvre</span><span class="mi-price">9,90€ <em>/ menu 12,90€</em></span></div>
+            <p class="mi-desc">Poulet pané, cheddar, chèvre, salade, tomate, oignons, sauce moutarde miel.</p>
+          </li>
+        </ul>
+        <p class="group-foot">Tout supplément 1,00€ : rösti, œuf, bacon, cheddar, poivrons…</p>
+      </section>
+
+      <!-- KUMPIR -->
+      <section class="menu-group" data-cat="kumpir">
+        <h3 class="group-title">Kumpir <span class="group-note">4 toppings au choix : maïs · olives · poivrons · chou rouge · jalapeños · thon · macédoine</span></h3>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Kumpir Kebab</span><span class="mi-price">10,50€ <em>/ menu 12,00€</em></span></div>
+            <p class="mi-desc">Pomme de terre au four, beurre, aligot à la mozzarella, kebab, champignons frais émincés, oignons caramélisés, sauce au choix.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Kumpir Cannibal</span><span class="mi-price">14,50€ <em>/ menu 16,00€</em></span></div>
+            <p class="mi-desc">Pomme de terre au four, beurre, aligot à la mozzarella, steak haché, saucisse, oignons, sauce au choix.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Kumpir Curry</span><span class="mi-price">11,00€ <em>/ menu 12,50€</em></span></div>
+            <p class="mi-desc">Pomme de terre au four, beurre, aligot à la mozzarella, poulet, sauce curry, oignons.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Kumpir Savoyard</span><span class="mi-price">13,50€ <em>/ menu 15,00€</em></span></div>
+            <p class="mi-desc">Pomme de terre au four, beurre, aligot à la mozzarella, lardons, fromage à raclette, émincé de champignons, oignons caramélisés.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Kumpir Poulet Tandoori</span><span class="mi-price">11,90€ <em>/ menu 13,40€</em></span></div>
+            <p class="mi-desc">Pomme de terre au four, beurre, aligot à la mozzarella, poulet tandoori, oignons.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Kumpir Barbecue</span><span class="mi-price">11,40€ <em>/ menu 12,90€</em></span></div>
+            <p class="mi-desc">Pomme de terre au four, beurre, aligot à la mozzarella, poulet, sauce barbecue, oignons.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Kumpir Roquefort</span><span class="mi-price">13,90€ <em>/ menu 15,40€</em></span></div>
+            <p class="mi-desc">Pomme de terre au four, beurre, aligot à la mozzarella, roquefort, bavette, échalote, champignons.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Kumpir Végétarien</span><span class="mi-price">10,00€ <em>/ menu 11,50€</em></span></div>
+            <p class="mi-desc">Pomme de terre au four, beurre, aligot à la mozzarella, légumes du jour.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Philly Cheese Steak</span><span class="mi-price">13,50€ <em>/ menu 15,00€</em></span></div>
+            <p class="mi-desc">Pomme de terre au four, beurre, aligot à la mozzarella, faux-filet, oignons, sauce au choix, provolone, poivrons, champignons.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Kumpir Chèvre Miel</span><span class="mi-price">11,00€ <em>/ menu 12,50€</em></span></div>
+            <p class="mi-desc">Pomme de terre au four, beurre, aligot à la mozzarella, chèvre, miel.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- BOXS -->
+      <section class="menu-group" data-cat="boxs">
+        <h3 class="group-title">Boxs</h3>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Box Chicken Beef</span><span class="mi-price">17,50€</span></div>
+            <p class="mi-desc">1 So Good Chicken &amp; 1 Double Cheese coupés en deux, accompagnés de frites et d'une canette.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Box Truffe</span><span class="mi-price">23,40€</span></div>
+            <p class="mi-desc">1 Cheese &amp; 1 Double Cheese sauce truffe, 4 onion rings, 2 tenders, 4 popcorn poulet, 1 pot de mayo sauce truffe.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Box Famille</span><span class="mi-price">39,90€</span></div>
+            <p class="mi-desc">Assortiment à partager : 2 So Good Chicken, 2 Double Cheeseburgers, 2 Cheeseburgers, frites, oignons crispy et bouteille 1,5L.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Box Hot-Dogs</span><span class="mi-price">19,90€</span></div>
+            <p class="mi-desc">1 hot-dog classique, 1 hot-dog montagnard, 1 hot-dog truffe, accompagnés de frites et d'une canette.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Box Beef</span><span class="mi-price">14,90€</span></div>
+            <p class="mi-desc">2 Double Cheese coupés en deux, frites, canette.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- SNACKING -->
+      <section class="menu-group" data-cat="snacking">
+        <h3 class="group-title">Snacking</h3>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Nuggets</span><span class="mi-price">5 pièces 5,00€</span></div>
+            <p class="mi-desc">Morceaux de poulet panés, dorés et croustillants.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Mozza Sticks</span><span class="mi-price">5 pièces 6,00€</span></div>
+            <p class="mi-desc">Bâtonnets de mozzarella fondante, enrobés d'une panure croustillante.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Tenders Faits Maison</span><span class="mi-price">4 pièces 7,00€</span></div>
+            <p class="mi-desc">Filets de poulet tenders, panure croustillante.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Wings</span><span class="mi-price">5 pièces 6,50€</span></div>
+            <p class="mi-desc">Ailes de poulets marinées, croustillantes et pleines de saveur.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Bucket 2×5</span><span class="mi-price">18,40€</span></div>
+            <p class="mi-desc">Tenders + 5 wings (épicés ou non), servis avec 1 grande frite et 1 boisson.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Frites</span><span class="mi-price">3,50€</span></div>
+            <p class="mi-desc">Frites dorées, croustillantes à souhait, l'accompagnement parfait.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Frites Cheddar Bacon</span><span class="mi-price">5,50€</span></div>
+            <p class="mi-desc">Frites croustillantes nappées de cheddar fondant et de morceaux de bacon grillé.</p>
+          </li>
+        </ul>
+        <p class="group-foot">Supplément : cheddar 1,00€ / bacon 1,50€</p>
+      </section>
+
+      <!-- MENUS -->
+      <section class="menu-group" data-cat="menus">
+        <h3 class="group-title">Menus</h3>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Menu Étudiant</span><span class="mi-price">10,00€</span></div>
+            <p class="mi-desc">Steak 80g ou fish, salade, tomate, oignons rouges, cheddar, sauce ketchup, mayonnaise.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Menu Enfant</span><span class="mi-price">8,00€</span></div>
+            <p class="mi-desc">5 nuggets ou 1 cheeseburger, Capri-Sun, frites, compote. Jusqu'à 11 ans.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- DESSERTS -->
+      <section class="menu-group" data-cat="desserts">
+        <h3 class="group-title">Desserts</h3>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Tiramisu</span><span class="mi-price">4,50€</span></div>
+            <p class="mi-desc">Parfums selon disponibilité.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Donuts</span><span class="mi-price">3,00€</span></div>
+            <p class="mi-desc">Chocolat.</p>
+          </li>
+          <li class="menu-item">
+            <div class="mi-head"><span class="mi-name">Tarte au Daim</span><span class="mi-price">3,00€</span></div>
+            <p class="mi-desc">Selon disponibilité.</p>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+
+    <div class="menu-cards">
+      <p class="section-eyebrow center">La carte en images</p>
+      <div class="menu-cards-grid">
+        <a href="assets/img/menu-1.jpg" target="_blank" rel="noopener"><img src="assets/img/menu-1.jpg" alt="Carte So Good Diner — sandwichs, boxs, snacking, menus, desserts" loading="lazy" /></a>
+        <a href="assets/img/menu-2.jpg" target="_blank" rel="noopener"><img src="assets/img/menu-2.jpg" alt="Carte So Good Diner — kumpir, burgers et wraps" loading="lazy" /></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AVIS ===== -->
+  <section class="reviews" id="avis">
+    <p class="section-eyebrow center">Vos avis sur So Good Diner</p>
+    <h2 class="section-title center">Ils sont venus, ils recommandent</h2>
+    <div class="reviews-grid">
+      <figure class="review">
+        <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
+        <blockquote>
+          Une très belle découverte ! J'ai passé un excellent moment : le repas était délicieux,
+          fait avec soin et surtout maison. Les patrons sont au top, avec un accueil chaleureux et familial.
+          Je recommande à 100 %. On y va pour manger, on y reste pour l'accueil !
+        </blockquote>
+        <figcaption>Marc M.</figcaption>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
+        <blockquote>
+          Accueil au top ! Je ne laisse jamais d'avis, mais là c'était tellement bon que ça mérite que
+          les gens connaissent ce lieu ! Produits frais, sauces maison super bonnes. Que ce soit au niveau
+          du goût, du visuel ou de la quantité, il n'y a rien à dire ! Je recommande +++++++
+        </blockquote>
+        <figcaption>Vanessa P.</figcaption>
+      </figure>
+      <figure class="review">
+        <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
+        <blockquote>
+          J'ai été attirée par les avis déjà existants, et je ne suis pas déçue. Un accueil incroyable :
+          l'un des employés va chercher le pain à la boulangerie et la viande chez le boucher. On voit les
+          cuistots préparer les steaks. Un gage de qualité à 200 % — je me suis régalée. Merci beaucoup.
+        </blockquote>
+        <figcaption>Yaël S.</figcaption>
+      </figure>
+    </div>
+    <p class="reviews-handle"><a href="https://www.instagram.com/sogooddiner83" target="_blank" rel="noopener">@sogooddiner83</a></p>
+  </section>
+
+  <!-- ===== GALERIE ===== -->
+  <section class="gallery" id="galerie">
+    <p class="section-eyebrow center">Galerie</p>
+    <h2 class="section-title center">Ça se passe au diner</h2>
+    <div class="gallery-grid">
+      <video controls muted loop playsinline preload="metadata" poster="assets/img/hero.jpg">
+        <source src="assets/video/clip-1.mp4" type="video/mp4" />
+      </video>
+      <video controls muted loop playsinline preload="metadata" poster="assets/img/hero.jpg">
+        <source src="assets/video/clip-2.mp4" type="video/mp4" />
+      </video>
+      <video controls muted loop playsinline preload="metadata" poster="assets/img/hero.jpg">
+        <source src="assets/video/clip-3.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <p class="section-eyebrow">Nous trouver</p>
+        <h2 class="section-title">So Good Diner · Fréjus</h2>
+        <ul class="contact-list">
+          <li>
+            <span class="ci-label">Adresse</span>
+            <a href="https://maps.google.com/?q=65+Rue+du+Général+de+Gaulle+83600+Fréjus" target="_blank" rel="noopener">
+              65 Rue du Général de Gaulle, 83600 Fréjus
+            </a>
+          </li>
+          <li>
+            <span class="ci-label">Téléphone</span>
+            <span class="placeholder">[Numéro à compléter]</span>
+          </li>
+          <li>
+            <span class="ci-label">Horaires</span>
+            <span class="placeholder">[Horaires à compléter — ex. Lun–Dim 11h30–14h30 / 18h30–22h30]</span>
+          </li>
+          <li>
+            <span class="ci-label">Instagram</span>
+            <a href="https://www.instagram.com/sogooddiner83" target="_blank" rel="noopener">@sogooddiner83</a>
+          </li>
+        </ul>
+        <div class="contact-actions">
+          <a href="https://maps.google.com/?q=65+Rue+du+Général+de+Gaulle+83600+Fréjus" target="_blank" rel="noopener" class="btn btn-primary">Itinéraire</a>
+          <a href="#carte" class="btn btn-ghost">Voir la carte</a>
+        </div>
+      </div>
+      <div class="contact-map">
+        <iframe
+          title="Carte — So Good Diner, Fréjus"
+          src="https://www.google.com/maps?q=65%20Rue%20du%20G%C3%A9n%C3%A9ral%20de%20Gaulle%2C%2083600%20Fr%C3%A9jus&output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="brand-script">sogood</span>
+      <span class="brand-sub">DINER</span>
+    </div>
+    <p class="footer-address">65 Rue du Général de Gaulle, 83600 Fréjus</p>
+    <nav class="footer-nav" aria-label="Pied de page">
+      <a href="#carte">La Carte</a>
+      <a href="#avis">Avis</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.instagram.com/sogooddiner83" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <p class="footer-legal">© <span id="year"></span> So Good Diner — Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
