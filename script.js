@@ -69,6 +69,26 @@ chips.forEach((chip) => {
   });
 });
 
+// ===== Gallery videos: autoplay when in view, pause when out =====
+const galleryVideos = Array.from(document.querySelectorAll('.gallery-grid video'));
+if (galleryVideos.length && 'IntersectionObserver' in window) {
+  const playObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const v = entry.target;
+        if (entry.isIntersecting) {
+          const p = v.play();
+          if (p && p.catch) p.catch(() => {});
+        } else {
+          v.pause();
+        }
+      });
+    },
+    { threshold: 0.25 }
+  );
+  galleryVideos.forEach((v) => playObserver.observe(v));
+}
+
 // ===== Reveal on scroll =====
 const revealEls = document.querySelectorAll(
   '.quality-card, .menu-group, .review, .gallery-grid video, .contact-info, .contact-map, .menu-cards'
