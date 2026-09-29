@@ -115,41 +115,26 @@ if (galleryVideos.length && 'IntersectionObserver' in window) {
   const inner = hero.querySelector('.hero-inner');
   const magnet = hero.querySelector('[data-magnetic]');
 
-  // Hero footage: loop ONLY the segment where the camera has reached the
-  // "So Good Diner" storefront sign (the rest of the clip renders poorly).
-  // The sign sits at the top of the portrait frame (crop biased up in CSS).
+  // Hero footage: play the whole clip once, panning the crop up to the
+  // "So Good Diner" storefront sign as the camera arrives, then FREEZE on the
+  // sign (end of its clean shot, before the footage moves on). No loop.
   const heroVideo = hero.querySelector('.hero-video');
   if (heroVideo) {
-    const SIGN_START = 15.8;  // camera has arrived at the sign (clean framing)
-    const SIGN_END   = 16.95; // before the owner's head crops into frame
-    const SIGN_RATE  = 0.4;   // slow, cinematic drift across the sign
-    const MAX_PASSES = 3;     // play the sign loop 3 times, then hold on it
+    const PAN_AT    = 14.3;   // camera nears the storefront -> pan crop up to the sign
+    const STOP_TIME = 16.4;   // clean, readable full sign -> freeze here
 
-    let passes = 0;
-    const clampToSign = () => {
+    let stopped = false;
+    const onTime = () => {
       if (!heroVideo.duration) return;
-      if (heroVideo.playbackRate !== SIGN_RATE) heroVideo.playbackRate = SIGN_RATE;
       const t = heroVideo.currentTime;
-      if (t >= SIGN_END) {
-        passes += 1;
-        if (passes < MAX_PASSES) {
-          try { heroVideo.currentTime = SIGN_START; } catch (e) {}
-        } else {
-          heroVideo.pause();  // freeze on the sign after the 3rd pass
-        }
-      } else if (t < SIGN_START - 0.05) {
-        try { heroVideo.currentTime = SIGN_START; } catch (e) {}  // pre-window, not a pass
+      if (t >= PAN_AT) hero.classList.add('at-sign');
+      if (!stopped && t >= STOP_TIME) {
+        stopped = true;
+        heroVideo.pause();                              // stop on the sign, do not loop
+        try { heroVideo.currentTime = STOP_TIME; } catch (e) {}  // freeze on the exact frame
       }
     };
-
-    const enterSign = () => {
-      heroVideo.playbackRate = SIGN_RATE;
-      if (heroVideo.duration) { try { heroVideo.currentTime = SIGN_START; } catch (e) {} }
-    };
-    if (heroVideo.readyState >= 1) enterSign();
-    else heroVideo.addEventListener('loadedmetadata', enterSign, { once: true });
-
-    heroVideo.addEventListener('timeupdate', clampToSign);
+    heroVideo.addEventListener('timeupdate', onTime);
   }
 
   // Cursor-tracked key light + subtle parallax (desktop, motion-OK only).
