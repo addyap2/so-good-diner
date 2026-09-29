@@ -97,11 +97,13 @@ em { font-style: italic; }
   transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, padding 0.3s ease;
   border-bottom: 1px solid transparent;
 }
-/* Soft top scrim so the transparent nav stays legible over the hero video */
+/* Strong top scrim so the transparent nav stays legible over the bright
+   hero footage (kitchen highlights and the near-white storefront sign). */
 .site-header::before {
   content: "";
-  position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(to bottom, rgba(8,6,4,0.6), transparent);
+  position: absolute; left: 0; right: 0; top: 0; height: 220%; z-index: -1;
+  background: linear-gradient(to bottom,
+    rgba(6,4,3,0.92) 0%, rgba(6,4,3,0.7) 40%, rgba(6,4,3,0.28) 75%, transparent 100%);
   opacity: 1; transition: opacity 0.3s ease;
   pointer-events: none;
 }
@@ -124,8 +126,12 @@ em { font-style: italic; }
   letter-spacing: 0.06em;
   font-size: 0.84rem;
   color: #d9d1c4;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.55);
   transition: color 0.15s ease;
 }
+.site-header.scrolled .nav a { text-shadow: none; }
+.lang-switch button { text-shadow: 0 1px 6px rgba(0,0,0,0.55); }
+.site-header.scrolled .lang-switch button { text-shadow: none; }
 .nav a:hover { color: var(--gold); }
 .lang-switch {
   display: flex;
