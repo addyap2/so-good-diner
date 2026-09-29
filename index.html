@@ -17,6 +17,43 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- ===== DECORATIVE FOOD LINE-ART SPRITE (defined once, reused via <use>) ===== -->
+  <svg class="deco-sprite" aria-hidden="true" focusable="false" width="0" height="0">
+    <defs>
+      <g id="deco-stroke-props"></g>
+    </defs>
+    <symbol id="deco-burger" viewBox="0 0 100 100">
+      <path d="M18 40c0-14 14-24 32-24s32 10 32 24" />
+      <path d="M28 30h2M40 24h2M52 26h2M64 28h2" />
+      <path d="M18 40h64" />
+      <path d="M20 48c6 4 12-4 18 0s12 4 18 0 12-4 18 0 6 0 8-1" />
+      <path d="M18 56h64" />
+      <path d="M18 56c0 12 14 20 32 20s32-8 32-20" />
+    </symbol>
+    <symbol id="deco-fries" viewBox="0 0 100 100">
+      <path d="M34 46l4-24M44 44l2-30M54 44l2-30M64 46l4-24" />
+      <path d="M28 44h44l-5 38a6 6 0 0 1-6 5H39a6 6 0 0 1-6-5z" />
+      <path d="M33 58h34" />
+    </symbol>
+    <symbol id="deco-cup" viewBox="0 0 100 100">
+      <path d="M30 34h40l-5 50a6 6 0 0 1-6 5H41a6 6 0 0 1-6-5z" />
+      <path d="M26 30h48v6H26z" />
+      <path d="M58 30l6-16" />
+      <path d="M40 48h20M42 62h16" />
+    </symbol>
+    <symbol id="deco-kumpir" viewBox="0 0 100 100">
+      <path d="M14 54c0-12 16-20 36-20s36 8 36 20-16 20-36 20-36-8-36-20z" />
+      <path d="M30 50c6-6 10-6 16 0s10 6 16 0" />
+      <path d="M38 44l3-6M50 42v-8M62 44l3-6" />
+      <path d="M36 60c4 2 8 2 12 0M56 60c4 2 8 2 12 0" />
+    </symbol>
+    <symbol id="deco-jar" viewBox="0 0 100 100">
+      <path d="M38 26h24v8H38z" />
+      <path d="M34 34h32v50a6 6 0 0 1-6 6H40a6 6 0 0 1-6-6z" />
+      <path d="M40 52h20v22H40z" />
+    </symbol>
+  </svg>
+
   <!-- ===== HEADER ===== -->
   <header class="site-header" id="top">
     <a href="#top" class="brand" aria-label="So Good Diner">
@@ -39,48 +76,61 @@
     </button>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero">
+  <!-- ===== HERO — cinematic full-bleed ===== -->
+  <section class="hero" id="hero">
+    <!-- Full-bleed footage + cinematic grade -->
+    <div class="hero-stage" aria-hidden="true">
+      <div class="hero-media">
+        <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero.jpg">
+          <source src="assets/video/clip-2.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="hero-scrim"></div>
+      <div class="hero-vignette"></div>
+      <div class="hero-spot"></div>
+      <div class="hero-grain"></div>
+    </div>
+
+    <!-- Editorial copy, anchored lower-left like a film poster -->
     <div class="hero-inner">
-      <div class="hero-content">
-        <p class="eyebrow hero-anim" style="--d:.05s" data-en="Burgers · Kumpir · Snacking">Burgers · Kumpir · Snacking</p>
-        <h1 class="hero-logo hero-anim" style="--d:.15s">
-          <img src="assets/img/logo-white.png" alt="So Good Diner" class="hero-logo-img" />
-        </h1>
-        <p class="hero-tagline hero-anim" style="--d:.28s" data-en="Gourmet burgers, generous kumpir &amp; homemade snacking.<br /><em>Artisan bread from the baker. Fresh meat from the butcher.</em>">
-          Burgers gourmands, kumpir généreux &amp; snacking maison.<br />
-          <em>Pain artisanal du boulanger. Viande fraîche du boucher.</em>
-        </p>
-        <p class="hero-lede hero-anim" style="--d:.4s" data-en="Generous burgers and kumpir, prepared in front of you with fresh, local produce. Come for the food, stay for the welcome.">Des burgers et des kumpir généreux, préparés sous vos yeux avec des produits frais du quartier. On vient pour manger, on reste pour l'accueil.</p>
-        <a class="hero-address hero-anim" style="--d:.5s" href="https://maps.google.com/?q=65+Rue+du+Général+de+Gaulle+83600+Fréjus" target="_blank" rel="noopener">
-          <svg class="hero-pin" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2c-3.87 0-7 3.13-7 7 0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
-          <span>65 Rue du Général de Gaulle, 83600 Fréjus</span>
-        </a>
-        <div class="hero-actions hero-anim" style="--d:.62s">
-          <a href="#carte" class="btn btn-primary" data-en="See the menu">Découvrir la carte</a>
-          <a href="#contact" class="btn btn-ghost" data-en="Find us">Nous trouver</a>
-        </div>
+      <p class="hero-eyebrow" data-reveal style="--d:.15s">
+        <span class="hero-eyebrow-dot"></span>
+        <span data-en="Fréjus · Burgers · Kumpir · Snacking">Fréjus · Burgers · Kumpir · Snacking</span>
+      </p>
+
+      <h1 class="hero-headline">
+        <span class="hl-line"><span class="hl-in" style="--d:.30s" data-en="Seared to order,">Grillé minute,</span></span>
+        <span class="hl-line"><span class="hl-in" style="--d:.40s" data-en="served">servi</span></span>
+        <span class="hl-line"><span class="hl-in foil" style="--d:.50s" data-en="so good.">so good.</span></span>
+      </h1>
+
+      <p class="hero-sub" data-reveal style="--d:.72s" data-en="Gourmet burgers &amp; generous kumpir — baker's bread, butcher's meat, prepared before your eyes.">Burgers gourmands &amp; kumpir généreux — pain du boulanger, viande du boucher, préparés sous vos yeux.</p>
+
+      <div class="hero-cta" data-reveal style="--d:.86s">
+        <a href="#carte" class="btn btn-primary" data-magnetic data-en="See the menu">Découvrir la carte</a>
+        <a href="https://maps.google.com/?q=65+Rue+du+Général+de+Gaulle+83600+Fréjus" target="_blank" rel="noopener" class="btn btn-ghost" data-en="Get directions">Nous trouver</a>
       </div>
-      <div class="hero-media hero-anim" style="--d:.35s">
-        <span class="hero-media-glow" aria-hidden="true"></span>
-        <div class="hero-media-frame">
-          <video autoplay muted loop playsinline poster="assets/img/hero.jpg">
-            <source src="assets/video/clip-2.mp4" type="video/mp4" />
-          </video>
-          <span class="hero-media-sheen" aria-hidden="true"></span>
-        </div>
-        <span class="hero-media-badge" aria-hidden="true">★★★★★ · Fréjus</span>
+
+      <div class="hero-proof" data-reveal style="--d:1s">
+        <span class="hero-stars" aria-hidden="true">★★★★★</span>
+        <span data-en="Loved in Fréjus · 100% homemade">Adoré à Fréjus · 100% fait maison</span>
       </div>
     </div>
-    <div class="hero-scroll" aria-hidden="true">
-      <span></span> <em data-en="Scroll">Faites défiler</em>
-    </div>
+
+    <a class="hero-scroll" href="#qualite" aria-label="Scroll to content">
+      <span class="hero-scroll-line" aria-hidden="true"></span>
+      <em data-en="Scroll">Défiler</em>
+    </a>
   </section>
 
   <div class="band" aria-hidden="true"></div>
 
   <!-- ===== QUALITÉ / MAISON ===== -->
   <section class="quality" id="qualite">
+    <div class="deco-layer" aria-hidden="true">
+      <svg class="deco deco--jar" style="--d:.3s"><use href="#deco-jar" /></svg>
+      <svg class="deco deco--kumpir" style="--d:1s"><use href="#deco-kumpir" /></svg>
+    </div>
     <div class="quality-inner">
       <p class="section-eyebrow" data-en="Our House">Notre maison</p>
       <h2 class="section-title" data-en="Homemade, with real ingredients">Fait maison, avec des produits vrais</h2>
@@ -402,6 +452,10 @@
 
   <!-- ===== GALERIE ===== -->
   <section class="gallery" id="galerie">
+    <div class="deco-layer" aria-hidden="true">
+      <svg class="deco deco--burger deco--right" style="--d:.8s"><use href="#deco-burger" /></svg>
+      <svg class="deco deco--fries deco--left" style="--d:.2s"><use href="#deco-fries" /></svg>
+    </div>
     <p class="section-eyebrow center" data-en="Gallery">Galerie</p>
     <h2 class="section-title center" data-en="Life at the diner">Ça se passe au diner</h2>
     <div class="gallery-grid">
