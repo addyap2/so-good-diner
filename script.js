@@ -115,6 +115,20 @@ if (galleryVideos.length && 'IntersectionObserver' in window) {
   const inner = hero.querySelector('.hero-inner');
   const magnet = hero.querySelector('[data-magnetic]');
 
+  // Brand title-card: reveal over the last stretch of the loop, hide when it restarts.
+  const heroVideo = hero.querySelector('.hero-video');
+  if (heroVideo) {
+    const BRAND_LEAD = 2.2; // seconds before the end to show the brand card
+    const updateBrand = () => {
+      const d = heroVideo.duration;
+      if (!d || isNaN(d)) return;
+      const left = d - heroVideo.currentTime;
+      hero.classList.toggle('is-branded', left <= BRAND_LEAD && left > 0.12);
+    };
+    heroVideo.addEventListener('timeupdate', updateBrand);
+    heroVideo.addEventListener('seeking', updateBrand);
+  }
+
   // Cursor-tracked key light + subtle parallax (desktop, motion-OK only).
   // media uses the individual `translate` property; scroll owns `scale` — they never clash.
   if (finePointer && !reduce) {
