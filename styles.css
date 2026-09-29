@@ -1,15 +1,15 @@
 /* ===== TOKENS ===== */
 :root {
-  --bg: #0c0c0e;
-  --bg-2: #121216;
-  --surface: #16161b;
-  --surface-2: #1c1c22;
-  --line: rgba(255, 255, 255, 0.08);
-  --text: #f4f3ef;
-  --muted: #a5a49d;
-  --muted-2: #77766f;
-  --gold: #c9a24b;
-  --gold-soft: #d8b871;
+  --bg: #1a1511;
+  --bg-2: #211a14;
+  --surface: #29211a;
+  --surface-2: #312820;
+  --line: rgba(255, 240, 220, 0.09);
+  --text: #f6f0e8;
+  --muted: #b0a695;
+  --muted-2: #837768;
+  --gold: #d0a94f;
+  --gold-soft: #e2c079;
   --orange: #f2681c;
   --radius: 14px;
   --maxw: 1180px;
@@ -130,15 +130,15 @@ em { font-style: italic; }
 /* ===== HERO ===== */
 .hero {
   position: relative;
-  min-height: 100svh;
+  min-height: min(86svh, 780px);
   display: flex;
   align-items: center;
-  padding: 7rem clamp(1.25rem, 4vw, 2.5rem) 5rem;
+  padding: 6rem clamp(1.25rem, 4vw, 2.5rem) 4rem;
   overflow: hidden;
   background:
-    radial-gradient(90% 70% at 80% 15%, rgba(201,162,75,0.10), transparent 60%),
-    radial-gradient(80% 80% at 10% 90%, rgba(242,104,28,0.08), transparent 55%),
-    linear-gradient(180deg, #0e0e12, #0a0a0c);
+    radial-gradient(90% 70% at 82% 12%, rgba(208,169,79,0.14), transparent 60%),
+    radial-gradient(80% 80% at 8% 92%, rgba(242,104,28,0.12), transparent 55%),
+    linear-gradient(180deg, #221a13, #17110d);
 }
 .hero-inner {
   position: relative;
@@ -333,7 +333,7 @@ section { position: relative; }
 .section-lead { color: var(--muted); max-width: 640px; margin-top: 1rem; font-size: 1.05rem; }
 
 /* ===== QUALITY ===== */
-.quality { background: var(--bg-2); padding: clamp(4rem, 9vw, 7rem) clamp(1rem, 4vw, 2.5rem); border-top: 1px solid var(--line); }
+.quality { background: var(--bg-2); padding: clamp(2.75rem, 6vw, 4.5rem) clamp(1rem, 4vw, 2.5rem); border-top: 1px solid var(--line); }
 .quality-inner { max-width: var(--maxw); margin: 0 auto; }
 .quality-grid {
   display: grid;
@@ -354,7 +354,7 @@ section { position: relative; }
 .quality-card p { color: var(--muted); font-size: 0.95rem; }
 
 /* ===== MENU ===== */
-.menu { padding: clamp(4rem, 9vw, 7rem) clamp(1rem, 4vw, 2.5rem); max-width: var(--maxw); margin: 0 auto; }
+.menu { padding: clamp(2.75rem, 6vw, 4.5rem) clamp(1rem, 4vw, 2.5rem); max-width: var(--maxw); margin: 0 auto; }
 .menu-head { text-align: center; display: flex; flex-direction: column; align-items: center; }
 .drinks-band {
   display: flex; flex-wrap: wrap; gap: 1.25rem; justify-content: center;
@@ -367,7 +367,7 @@ section { position: relative; }
 }
 .drinks-band b { color: var(--gold); }
 
-.menu-filters { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin: 2.5rem 0 3rem; }
+.menu-filters { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin: 2rem 0 2.25rem; }
 .chip {
   font-family: var(--font-head);
   text-transform: uppercase;
@@ -384,7 +384,7 @@ section { position: relative; }
 .chip:hover { color: var(--text); border-color: rgba(255,255,255,0.25); }
 .chip.is-active { background: var(--gold); color: #14140f; border-color: var(--gold); }
 
-.menu-groups { display: flex; flex-direction: column; gap: 3.5rem; }
+.menu-groups { display: flex; flex-direction: column; gap: 2.5rem; }
 .menu-group.is-hidden { display: none; }
 .group-title {
   font-family: var(--font-display);
@@ -442,7 +442,7 @@ section { position: relative; }
 .reviews {
   background: var(--bg-2);
   border-top: 1px solid var(--line);
-  padding: clamp(4rem, 9vw, 7rem) clamp(1rem, 4vw, 2.5rem);
+  padding: clamp(2.75rem, 6vw, 4.5rem) clamp(1rem, 4vw, 2.5rem);
 }
 .reviews-grid {
   max-width: var(--maxw);
@@ -473,7 +473,7 @@ section { position: relative; }
 .reviews-handle a:hover { color: var(--orange); }
 
 /* ===== GALLERY ===== */
-.gallery { padding: clamp(4rem, 9vw, 7rem) clamp(1rem, 4vw, 2.5rem); max-width: var(--maxw); margin: 0 auto; }
+.gallery { padding: clamp(2.75rem, 6vw, 4.5rem) clamp(1rem, 4vw, 2.5rem); max-width: var(--maxw); margin: 0 auto; }
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -490,7 +490,7 @@ section { position: relative; }
 }
 
 /* ===== CONTACT ===== */
-.contact { background: var(--bg-2); border-top: 1px solid var(--line); padding: clamp(4rem, 9vw, 7rem) clamp(1rem, 4vw, 2.5rem); }
+.contact { background: var(--bg-2); border-top: 1px solid var(--line); padding: clamp(2.75rem, 6vw, 4.5rem) clamp(1rem, 4vw, 2.5rem); }
 .contact-inner {
   max-width: var(--maxw);
   margin: 0 auto;
