@@ -30,12 +30,19 @@ langButtons.forEach((b) =>
   b.addEventListener('click', () => setLang(b.dataset.lang))
 );
 
-// Initial language: saved choice, else browser preference, else French.
-let initial = 'fr';
+// Default to the visitor's browser language (EN if it's English, otherwise FR).
+// A visitor's own switch is remembered and takes precedence.
+function browserLang() {
+  const langs = navigator.languages && navigator.languages.length
+    ? navigator.languages
+    : [navigator.language || navigator.userLanguage || 'fr'];
+  return langs.some((l) => String(l).toLowerCase().startsWith('en')) ? 'en' : 'fr';
+}
+
+let initial = browserLang();
 try {
   const saved = localStorage.getItem('sgd-lang');
   if (saved === 'en' || saved === 'fr') initial = saved;
-  else if ((navigator.language || '').toLowerCase().startsWith('en')) initial = 'en';
 } catch (e) {}
 setLang(initial);
 
