@@ -122,7 +122,7 @@ if (galleryVideos.length && 'IntersectionObserver' in window) {
   if (heroVideo) {
     const SIGN_START = 15.8;  // camera has arrived at the sign (clean framing)
     const SIGN_END   = 16.95; // before the owner's head crops into frame
-    const SIGN_RATE  = 0.65;  // gently slow the short loop so it feels elegant
+    const SIGN_RATE  = 0.4;   // slow, cinematic drift across the sign
 
     const clampToSign = () => {
       if (!heroVideo.duration) return;
