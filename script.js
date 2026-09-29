@@ -115,17 +115,38 @@ if (galleryVideos.length && 'IntersectionObserver' in window) {
   const inner = hero.querySelector('.hero-inner');
   const magnet = hero.querySelector('[data-magnetic]');
 
-  // Brand title-card: reveal over the last stretch of the loop, hide when it restarts.
+  // Hero footage: the real "sogood" storefront sign lives in the last ~3s of
+  // the clip, at the top of the portrait frame. Loop just the tail so the sign
+  // reveal recurs every ~10s (not once per 18s), and pan the crop up to it.
   const heroVideo = hero.querySelector('.hero-video');
   if (heroVideo) {
-    const BRAND_LEAD = 2.2; // seconds before the end to show the brand card
+    const LOOP_START = 8.0;  // clip griddle prep → storefront sign → owner
+    const BRAND_LEAD = 3.2;  // seconds before the end: pan up to the sign as it appears
+
     const updateBrand = () => {
       const d = heroVideo.duration;
       if (!d || isNaN(d)) return;
       const left = d - heroVideo.currentTime;
-      hero.classList.toggle('is-branded', left <= BRAND_LEAD && left > 0.12);
+      hero.classList.toggle('is-branded', left <= BRAND_LEAD && left > 0.1);
     };
-    heroVideo.addEventListener('timeupdate', updateBrand);
+
+    const restartWindow = () => {
+      if (!heroVideo.duration) return;
+      if (heroVideo.currentTime >= heroVideo.duration - 0.1) {
+        try { heroVideo.currentTime = LOOP_START; } catch (e) {}
+      }
+    };
+
+    // Enter the windowed region immediately so the sign comes within seconds.
+    const seekIntoWindow = () => {
+      if (heroVideo.duration && heroVideo.currentTime < LOOP_START) {
+        try { heroVideo.currentTime = LOOP_START; } catch (e) {}
+      }
+    };
+    if (heroVideo.readyState >= 1) seekIntoWindow();
+    else heroVideo.addEventListener('loadedmetadata', seekIntoWindow, { once: true });
+
+    heroVideo.addEventListener('timeupdate', () => { restartWindow(); updateBrand(); });
     heroVideo.addEventListener('seeking', updateBrand);
   }
 
