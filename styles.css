@@ -137,9 +137,18 @@ em { font-style: italic; }
   padding: 6rem clamp(1.25rem, 4vw, 2.5rem) 4rem;
   overflow: hidden;
   background:
-    radial-gradient(90% 70% at 82% 12%, rgba(208,169,79,0.14), transparent 60%),
-    radial-gradient(80% 80% at 8% 92%, rgba(242,104,28,0.12), transparent 55%),
-    linear-gradient(180deg, #221a13, #17110d);
+    radial-gradient(70% 60% at 88% 12%, rgba(208,169,79,0.12), transparent 60%),
+    radial-gradient(55% 55% at 96% 95%, rgba(242,104,28,0.10), transparent 60%),
+    linear-gradient(180deg, #241b14, #150f0b);
+}
+/* Slight darkening behind the copy for guaranteed legibility */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(100deg, rgba(10,7,4,0.55) 0%, rgba(10,7,4,0.25) 38%, transparent 58%);
+  pointer-events: none;
 }
 .hero-inner {
   position: relative;
@@ -156,14 +165,14 @@ em { font-style: italic; }
 .eyebrow {
   font-family: var(--font-head);
   text-transform: uppercase;
-  letter-spacing: 0.4em;
-  font-size: 0.72rem;
-  color: var(--gold);
+  letter-spacing: 0.38em;
+  font-size: 0.82rem;
+  color: var(--gold-soft);
   margin-bottom: 1rem;
 }
 .hero-logo { display: flex; justify-content: flex-start; margin-bottom: 1.5rem; }
 .hero-logo-img { width: clamp(220px, 30vw, 340px); height: auto; filter: drop-shadow(0 6px 24px rgba(0,0,0,0.5)); }
-.hero-tagline { font-size: clamp(1.05rem, 2.4vw, 1.35rem); color: #e8e7e1; }
+.hero-tagline { font-size: clamp(1.2rem, 2.7vw, 1.55rem); line-height: 1.45; color: #fbf7f0; text-shadow: 0 1px 12px rgba(0,0,0,0.45); }
 .hero-tagline em {
   font-style: italic;
   background: linear-gradient(100deg, var(--gold) 15%, #fff2cf 45%, var(--gold-soft) 75%, var(--gold) 90%);
@@ -179,10 +188,12 @@ em { font-style: italic; }
 @keyframes heroUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 @keyframes shimmer { to { background-position: 220% center; } }
 .hero-lede {
-  margin-top: 1rem;
-  font-size: 1rem;
-  color: var(--muted);
+  margin-top: 1.1rem;
+  font-size: clamp(1rem, 1.6vw, 1.12rem);
+  line-height: 1.65;
+  color: #e7ddce;
   max-width: 34rem;
+  text-shadow: 0 1px 10px rgba(0,0,0,0.4);
 }
 .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
 
