@@ -91,7 +91,7 @@ if (galleryVideos.length && 'IntersectionObserver' in window) {
 
 // ===== Reveal on scroll =====
 const revealEls = document.querySelectorAll(
-  '.quality-card, .menu-group, .review, .gallery-grid video, .contact-info, .contact-map, .menu-cards'
+  '.quality-card, .menu-group, .review, .gallery-grid video, .contact-info, .contact-map'
 );
 revealEls.forEach((el) => el.classList.add('reveal'));
 
