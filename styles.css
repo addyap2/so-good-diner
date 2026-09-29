@@ -230,7 +230,7 @@ em { font-style: italic; }
   position: relative;
   z-index: 4;
   width: 100%;
-  max-width: var(--maxw);
+  max-width: 1340px;
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 2.5rem) clamp(3.5rem, 10vh, 6.5rem);
 }
@@ -257,9 +257,9 @@ em { font-style: italic; }
   font-family: var(--font-display);
   font-weight: 400;
   text-transform: uppercase;
-  font-size: clamp(3rem, 9.2vw, 8rem);
-  line-height: 0.9;
-  letter-spacing: -0.005em;
+  font-size: clamp(3.2rem, 11vw, 10.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.01em;
   color: #fdf7ee;
   text-shadow: 0 12px 50px rgba(0,0,0,0.5);
   margin: 0 0 1.6rem;
@@ -280,9 +280,9 @@ em { font-style: italic; }
 }
 
 .hero-sub {
-  max-width: 40rem;
-  font-size: clamp(1.02rem, 1.7vw, 1.28rem);
-  line-height: 1.55;
+  max-width: 44rem;
+  font-size: clamp(1.1rem, 1.9vw, 1.5rem);
+  line-height: 1.5;
   color: #ece3d5;
   text-shadow: 0 1px 14px rgba(0,0,0,0.55);
 }
@@ -357,7 +357,7 @@ em { font-style: italic; }
 @media (max-width: 760px) {
   .hero { align-items: flex-end; }
   .hero-inner { padding-bottom: clamp(3.5rem, 12vh, 6rem); }
-  .hero-headline { font-size: clamp(2.7rem, 15vw, 4.6rem); }
+  .hero-headline { font-size: clamp(3rem, 17vw, 6rem); }
   .hero-scrim {
     background:
       radial-gradient(120% 70% at 80% 6%, rgba(242,104,28,0.20), transparent 50%),
