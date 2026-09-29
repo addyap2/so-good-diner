@@ -177,11 +177,11 @@ em { font-style: italic; }
 .hero-anim { opacity: 0; animation: heroUp 0.8s cubic-bezier(.2,.7,.2,1) forwards; animation-delay: var(--d, 0s); }
 @keyframes heroUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 @keyframes shimmer { to { background-position: 220% center; } }
-.hero-placeholder {
+.hero-lede {
   margin-top: 1rem;
-  font-size: 0.9rem;
-  color: var(--muted-2);
-  font-style: italic;
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 34rem;
 }
 .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
 
