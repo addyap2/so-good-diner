@@ -181,8 +181,9 @@ em { font-style: italic; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 50%;
-  transition: object-position 1.5s cubic-bezier(.4,0,.2,1);
+  /* The hero loops only the storefront-sign segment, which sits at the top of
+     the portrait frame, so bias the crop upward to keep the sign in view. */
+  object-position: 50% 8%;
   display: block;
   filter: saturate(1.06) contrast(1.05) brightness(0.92);
 }
@@ -217,15 +218,6 @@ em { font-style: italic; }
   background-size: 200px 200px;
   animation: grainShift 0.6s steps(4) infinite;
 }
-
-/* ---- Brand reveal: pan the crop up to the real storefront sign at the
-       loop's end. The 'sogood' sign + owner sit at the top of the portrait
-       frame, which object-fit: cover would otherwise crop away, so bias the
-       crop upward and lift the scrim so it reads clearly. Driven by
-       .is-branded (see script.js). ---- */
-.hero.is-branded .hero-video { object-position: 50% 3%; }
-.hero.is-branded .hero-scrim  { opacity: 0.4; transition: opacity 1.2s ease; }
-.hero.is-branded .hero-vignette { opacity: 0.5; transition: opacity 1.2s ease; }
 
 /* ---- Editorial copy ---- */
 .hero-inner {

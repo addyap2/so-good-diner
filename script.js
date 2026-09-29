@@ -115,39 +115,32 @@ if (galleryVideos.length && 'IntersectionObserver' in window) {
   const inner = hero.querySelector('.hero-inner');
   const magnet = hero.querySelector('[data-magnetic]');
 
-  // Hero footage: the real "sogood" storefront sign lives in the last ~3s of
-  // the clip, at the top of the portrait frame. Loop just the tail so the sign
-  // reveal recurs every ~10s (not once per 18s), and pan the crop up to it.
+  // Hero footage: loop ONLY the segment where the camera has reached the
+  // "So Good Diner" storefront sign (the rest of the clip renders poorly).
+  // The sign sits at the top of the portrait frame (crop biased up in CSS).
   const heroVideo = hero.querySelector('.hero-video');
   if (heroVideo) {
-    const LOOP_START = 8.0;  // clip griddle prep → storefront sign → owner
-    const BRAND_LEAD = 3.2;  // seconds before the end: pan up to the sign as it appears
+    const SIGN_START = 15.8;  // camera has arrived at the sign (clean framing)
+    const SIGN_END   = 16.95; // before the owner's head crops into frame
+    const SIGN_RATE  = 0.65;  // gently slow the short loop so it feels elegant
 
-    const updateBrand = () => {
-      const d = heroVideo.duration;
-      if (!d || isNaN(d)) return;
-      const left = d - heroVideo.currentTime;
-      hero.classList.toggle('is-branded', left <= BRAND_LEAD && left > 0.1);
-    };
-
-    const restartWindow = () => {
+    const clampToSign = () => {
       if (!heroVideo.duration) return;
-      if (heroVideo.currentTime >= heroVideo.duration - 0.1) {
-        try { heroVideo.currentTime = LOOP_START; } catch (e) {}
+      if (heroVideo.playbackRate !== SIGN_RATE) heroVideo.playbackRate = SIGN_RATE;
+      const t = heroVideo.currentTime;
+      if (t >= SIGN_END || t < SIGN_START - 0.05) {
+        try { heroVideo.currentTime = SIGN_START; } catch (e) {}
       }
     };
 
-    // Enter the windowed region immediately so the sign comes within seconds.
-    const seekIntoWindow = () => {
-      if (heroVideo.duration && heroVideo.currentTime < LOOP_START) {
-        try { heroVideo.currentTime = LOOP_START; } catch (e) {}
-      }
+    const enterSign = () => {
+      heroVideo.playbackRate = SIGN_RATE;
+      if (heroVideo.duration) { try { heroVideo.currentTime = SIGN_START; } catch (e) {} }
     };
-    if (heroVideo.readyState >= 1) seekIntoWindow();
-    else heroVideo.addEventListener('loadedmetadata', seekIntoWindow, { once: true });
+    if (heroVideo.readyState >= 1) enterSign();
+    else heroVideo.addEventListener('loadedmetadata', enterSign, { once: true });
 
-    heroVideo.addEventListener('timeupdate', () => { restartWindow(); updateBrand(); });
-    heroVideo.addEventListener('seeking', updateBrand);
+    heroVideo.addEventListener('timeupdate', clampToSign);
   }
 
   // Cursor-tracked key light + subtle parallax (desktop, motion-OK only).
