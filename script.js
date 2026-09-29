@@ -123,13 +123,22 @@ if (galleryVideos.length && 'IntersectionObserver' in window) {
     const SIGN_START = 15.8;  // camera has arrived at the sign (clean framing)
     const SIGN_END   = 16.95; // before the owner's head crops into frame
     const SIGN_RATE  = 0.4;   // slow, cinematic drift across the sign
+    const MAX_PASSES = 3;     // play the sign loop 3 times, then hold on it
 
+    let passes = 0;
     const clampToSign = () => {
       if (!heroVideo.duration) return;
       if (heroVideo.playbackRate !== SIGN_RATE) heroVideo.playbackRate = SIGN_RATE;
       const t = heroVideo.currentTime;
-      if (t >= SIGN_END || t < SIGN_START - 0.05) {
-        try { heroVideo.currentTime = SIGN_START; } catch (e) {}
+      if (t >= SIGN_END) {
+        passes += 1;
+        if (passes < MAX_PASSES) {
+          try { heroVideo.currentTime = SIGN_START; } catch (e) {}
+        } else {
+          heroVideo.pause();  // freeze on the sign after the 3rd pass
+        }
+      } else if (t < SIGN_START - 0.05) {
+        try { heroVideo.currentTime = SIGN_START; } catch (e) {}  // pre-window, not a pass
       }
     };
 
