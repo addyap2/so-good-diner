@@ -1,13 +1,51 @@
-// Year in footer
-document.getElementById('year').textContent = new Date().getFullYear();
+// ===== i18n (FR / EN) =====
+const i18nEls = Array.from(document.querySelectorAll('[data-en]'));
+// Cache the original French markup as the "fr" version.
+i18nEls.forEach((el) => { el.dataset.fr = el.innerHTML; });
 
-// Header background on scroll
+const fillYear = () => {
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+};
+
+const langButtons = Array.from(document.querySelectorAll('.lang-switch button'));
+
+function setLang(lang) {
+  const l = lang === 'en' ? 'en' : 'fr';
+  i18nEls.forEach((el) => {
+    const val = el.dataset[l];
+    if (val != null) el.innerHTML = val;
+  });
+  document.documentElement.lang = l;
+  langButtons.forEach((b) => {
+    const active = b.dataset.lang === l;
+    b.classList.toggle('is-active', active);
+    b.setAttribute('aria-pressed', String(active));
+  });
+  try { localStorage.setItem('sgd-lang', l); } catch (e) {}
+  fillYear();
+}
+
+langButtons.forEach((b) =>
+  b.addEventListener('click', () => setLang(b.dataset.lang))
+);
+
+// Initial language: saved choice, else browser preference, else French.
+let initial = 'fr';
+try {
+  const saved = localStorage.getItem('sgd-lang');
+  if (saved === 'en' || saved === 'fr') initial = saved;
+  else if ((navigator.language || '').toLowerCase().startsWith('en')) initial = 'en';
+} catch (e) {}
+setLang(initial);
+
+// ===== Header background on scroll =====
 const header = document.querySelector('.site-header');
 const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
 onScroll();
 window.addEventListener('scroll', onScroll, { passive: true });
 
-// Mobile nav toggle
+// ===== Mobile nav toggle =====
 const toggle = document.querySelector('.nav-toggle');
 toggle.addEventListener('click', () => {
   const open = header.classList.toggle('nav-open');
@@ -17,7 +55,7 @@ document.querySelectorAll('.nav a').forEach((a) =>
   a.addEventListener('click', () => header.classList.remove('nav-open'))
 );
 
-// Menu category filters
+// ===== Menu category filters =====
 const chips = document.querySelectorAll('.chip');
 const groups = document.querySelectorAll('.menu-group');
 chips.forEach((chip) => {
@@ -31,7 +69,7 @@ chips.forEach((chip) => {
   });
 });
 
-// Reveal on scroll
+// ===== Reveal on scroll =====
 const revealEls = document.querySelectorAll(
   '.quality-card, .menu-group, .review, .gallery-grid video, .contact-info, .contact-map, .menu-cards'
 );

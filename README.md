@@ -6,8 +6,9 @@ Site vitrine du **So Good Diner** — burgers, kumpir, box à partager et snacki
 
 ## Aperçu
 
-Site statique d'une seule page (HTML / CSS / JS, sans dépendance de build) :
+Site statique d'une seule page (HTML / CSS / JS, sans dépendance de build), **bilingue FR / EN** :
 
+- **Bilingue** — bouton FR/EN dans l'en-tête ; le français est la version par défaut, l'anglais est stocké dans les attributs `data-en` et basculé en JavaScript (choix mémorisé, langue du navigateur détectée)
 - **Hero** vidéo avec logo et accroche
 - **Notre maison** — pain artisanal, viande du boucher, sauces maison
 - **La Carte** complète avec filtres par catégorie (Sandwichs, Burgers & Wraps, Kumpir, Boxs, Snacking, Menus, Desserts)
