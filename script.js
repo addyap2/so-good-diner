@@ -115,23 +115,22 @@ if (galleryVideos.length && 'IntersectionObserver' in window) {
   const inner = hero.querySelector('.hero-inner');
   const magnet = hero.querySelector('[data-magnetic]');
 
-  // Hero footage: play the whole clip once, panning the crop up to the
-  // "So Good Diner" storefront sign as the camera arrives, then FREEZE on the
-  // sign (end of its clean shot, before the footage moves on). No loop.
+  // Hero footage: loop the whole sequence — play the clip while panning the
+  // crop up to the "So Good Diner" storefront sign as the camera arrives, and
+  // restart at the sign (before the footage moves on), resetting the crop.
   const heroVideo = hero.querySelector('.hero-video');
   if (heroVideo) {
-    const PAN_AT    = 14.3;   // camera nears the storefront -> pan crop up to the sign
-    const STOP_TIME = 16.4;   // clean, readable full sign -> freeze here
+    const PAN_AT   = 14.3;   // camera nears the storefront -> pan crop up to the sign
+    const LOOP_END = 16.4;   // clean, readable full sign -> restart here
 
-    let stopped = false;
     const onTime = () => {
       if (!heroVideo.duration) return;
       const t = heroVideo.currentTime;
-      if (t >= PAN_AT) hero.classList.add('at-sign');
-      if (!stopped && t >= STOP_TIME) {
-        stopped = true;
-        heroVideo.pause();                              // stop on the sign, do not loop
-        try { heroVideo.currentTime = STOP_TIME; } catch (e) {}  // freeze on the exact frame
+      if (t >= LOOP_END) {
+        hero.classList.remove('at-sign');       // reset crop to centre for the kitchen footage
+        try { heroVideo.currentTime = 0; } catch (e) {}
+      } else if (t >= PAN_AT) {
+        hero.classList.add('at-sign');          // pan crop up to the sign
       }
     };
     heroVideo.addEventListener('timeupdate', onTime);
