@@ -47,13 +47,20 @@ window.addEventListener('scroll', onScroll, { passive: true });
 
 // ===== Mobile nav toggle =====
 const toggle = document.querySelector('.nav-toggle');
-toggle.addEventListener('click', () => {
-  const open = header.classList.toggle('nav-open');
+const setMenu = (open) => {
+  header.classList.toggle('nav-open', open);
   toggle.setAttribute('aria-expanded', String(open));
-});
+  toggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Menu');
+  document.body.style.overflow = open ? 'hidden' : '';
+};
+toggle.addEventListener('click', () => setMenu(!header.classList.contains('nav-open')));
 document.querySelectorAll('.nav a').forEach((a) =>
-  a.addEventListener('click', () => header.classList.remove('nav-open'))
+  a.addEventListener('click', () => setMenu(false))
 );
+// Close on Escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && header.classList.contains('nav-open')) setMenu(false);
+});
 
 // ===== Menu category filters =====
 const chips = document.querySelectorAll('.chip');
