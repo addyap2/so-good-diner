@@ -136,16 +136,13 @@ if (galleryVideos.length && 'IntersectionObserver' in window) {
     heroVideo.addEventListener('timeupdate', onTime);
   }
 
-  // Cursor-tracked key light + subtle parallax (desktop, motion-OK only).
-  // media uses the individual `translate` property; scroll owns `scale` — they never clash.
+  // Cursor-tracked key light only (the background stays fixed — no parallax).
   if (finePointer && !reduce) {
     let px = 0.72, py = 0.22, raf = 0;
     const apply = () => {
       raf = 0;
       hero.style.setProperty('--mx', (px * 100).toFixed(2) + '%');
       hero.style.setProperty('--my', (py * 100).toFixed(2) + '%');
-      const dx = px - 0.5, dy = py - 0.5;
-      if (media) media.style.translate = `${(-dx * 16).toFixed(2)}px ${(-dy * 16).toFixed(2)}px`;
     };
     hero.addEventListener('pointermove', (e) => {
       const r = hero.getBoundingClientRect();
@@ -153,7 +150,6 @@ if (galleryVideos.length && 'IntersectionObserver' in window) {
       py = (e.clientY - r.top) / r.height;
       if (!raf) raf = requestAnimationFrame(apply);
     });
-    hero.addEventListener('pointerleave', () => { if (media) media.style.translate = '0 0'; });
 
     // Magnetic primary CTA
     if (magnet) {
