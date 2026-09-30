@@ -659,9 +659,9 @@ section { position: relative; }
 }
 .contact-photo img {
   width: 100%;
-  height: clamp(180px, 34vw, 320px);
+  aspect-ratio: 1940 / 608;
+  height: auto;
   object-fit: cover;
-  object-position: center 60%;
   display: block;
 }
 .contact-photo figcaption {
