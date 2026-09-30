@@ -649,6 +649,46 @@ section { position: relative; }
 
 /* ===== CONTACT ===== */
 .contact { background: var(--bg-2); border-top: 1px solid var(--line); padding: clamp(2.75rem, 6vw, 4.5rem) clamp(1rem, 4vw, 2.5rem); }
+/* ===== FAQ ===== */
+.faq {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-2);
+  border-top: 1px solid var(--line);
+  padding: clamp(2.75rem, 6vw, 4.5rem) clamp(1rem, 4vw, 2.5rem);
+}
+.faq-inner { max-width: 800px; margin: 0 auto; }
+.faq-list { margin-top: 2rem; border-top: 1px solid var(--line); }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.15rem 0.25rem;
+  font-family: var(--font-head);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  color: var(--text);
+  transition: color 0.15s ease;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+";
+  flex: none;
+  color: var(--gold);
+  font-size: 1.5rem;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item summary:hover { color: var(--gold-soft); }
+.faq-a { padding: 0 0.25rem 1.3rem; }
+.faq-a p { color: var(--muted); font-size: 0.98rem; line-height: 1.65; max-width: 66ch; }
+
 .contact-photo {
   max-width: var(--maxw);
   margin: 0 auto 2.5rem;
