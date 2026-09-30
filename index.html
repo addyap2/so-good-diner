@@ -84,18 +84,16 @@
       <div class="hero-media">
         <video class="hero-video" autoplay muted playsinline preload="auto" poster="assets/img/hero.jpg"></video>
         <script>
-          /* Pick the lightest hero source the device can use, with no double
-             download: phones get a smaller encode, and VP9 browsers get WebM
-             (H.264 mp4 as fallback). Runs during parse before any fetch. */
+          /* Pick the lightest hero source (VP9/WebM): phones get a smaller
+             720p encode, desktop the 1080p one. Runs during parse, before
+             any fetch, so there is no double download. */
           (function () {
             var v = document.querySelector('.hero-video');
             if (!v) return;
             var mobile = window.matchMedia('(max-width: 760px)').matches;
-            var base = 'assets/video/clip-2-hero' + (mobile ? '-mobile' : '');
-            var webm = v.canPlayType && v.canPlayType('video/webm; codecs="vp9"');
             var s = document.createElement('source');
-            s.src = base + (webm ? '.webm' : '.mp4');
-            s.type = webm ? 'video/webm' : 'video/mp4';
+            s.src = 'assets/video/clip-2-hero' + (mobile ? '-mobile' : '') + '.webm';
+            s.type = 'video/webm';
             v.appendChild(s);
             v.load();
             var p = v.play();
@@ -487,15 +485,12 @@
     <div class="gallery-grid">
       <video autoplay muted loop playsinline controls preload="metadata" poster="assets/img/hero.jpg">
         <source src="assets/video/clip-1.webm" type="video/webm" />
-        <source src="assets/video/clip-1.mp4" type="video/mp4" />
       </video>
       <video autoplay muted loop playsinline controls preload="metadata" poster="assets/img/hero.jpg">
         <source src="assets/video/clip-2.webm" type="video/webm" />
-        <source src="assets/video/clip-2.mp4" type="video/mp4" />
       </video>
       <video autoplay muted loop playsinline controls preload="metadata" poster="assets/img/hero.jpg">
         <source src="assets/video/clip-3.webm" type="video/webm" />
-        <source src="assets/video/clip-3.mp4" type="video/mp4" />
       </video>
     </div>
   </section>
