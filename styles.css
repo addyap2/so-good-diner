@@ -649,6 +649,32 @@ section { position: relative; }
 
 /* ===== CONTACT ===== */
 .contact { background: var(--bg-2); border-top: 1px solid var(--line); padding: clamp(2.75rem, 6vw, 4.5rem) clamp(1rem, 4vw, 2.5rem); }
+.contact-photo {
+  max-width: var(--maxw);
+  margin: 0 auto 2.5rem;
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.contact-photo img {
+  width: 100%;
+  height: clamp(180px, 34vw, 320px);
+  object-fit: cover;
+  object-position: center 60%;
+  display: block;
+}
+.contact-photo figcaption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 1.5rem 1.25rem 1rem;
+  font-family: var(--font-head);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.9rem;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(0,0,0,0.75));
+}
 .contact-inner {
   max-width: var(--maxw);
   margin: 0 auto;
