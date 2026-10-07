@@ -899,5 +899,5 @@ section { position: relative; }
 /* The new hero composition already provides its own framing. */
 .hero-media { inset: 0; scale: 1; animation: none; }
 @media (max-width: 860px) {
-  .hero-video { object-position: 50% 35%; }
+  .hero-video { object-position: 50% 65%; }
 }
