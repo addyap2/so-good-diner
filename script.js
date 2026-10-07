@@ -209,3 +209,48 @@ if ('IntersectionObserver' in window) {
 } else {
   revealEls.forEach((el) => el.classList.add('is-visible'));
 }
+
+// ===== Section-separator food conveyor (scroll-linked line-art) =====
+(() => {
+  const bands = Array.from(document.querySelectorAll('.band'));
+  if (!bands.length) return;
+
+  const ICONS = ['burger', 'fries', 'cup', 'kumpir', 'jar'];
+  const oneSet = () =>
+    ICONS.map((n) => `<svg class="band-ico"><use href="#deco-${n}" /></svg>`).join('');
+
+  const states = [];
+  bands.forEach((band, bi) => {
+    const track = document.createElement('div');
+    track.className = 'band-track';
+    track.setAttribute('aria-hidden', 'true');
+    track.innerHTML = oneSet().repeat(3); // temporary, to measure one set's width
+    band.appendChild(track);
+
+    const icos = track.querySelectorAll('.band-ico');
+    let setW = (icos[ICONS.length]?.offsetLeft || 0) - (icos[0]?.offsetLeft || 0);
+    if (!setW || setW < 1) setW = 260;
+
+    // Repeat enough sets to always cover the viewport plus one set of overscroll
+    const need = Math.ceil((window.innerWidth + setW) / setW) + 1;
+    track.innerHTML = oneSet().repeat(need);
+
+    states.push({ band, setW, phase: bi * 71 }); // phase offset so bands differ
+  });
+
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) return; // leave the icons static on the rail
+
+  const FACTOR = 0.2; // icons drift ~1px per 5px of scroll
+  let raf = 0;
+  const update = () => {
+    raf = 0;
+    const y = window.scrollY || 0;
+    states.forEach((s) => {
+      const shift = -(((y * FACTOR) + s.phase) % s.setW);
+      s.band.style.setProperty('--band-shift', shift.toFixed(1) + 'px');
+    });
+  };
+  update();
+  window.addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(update); }, { passive: true });
+})();
