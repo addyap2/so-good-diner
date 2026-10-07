@@ -567,12 +567,6 @@ section { position: relative; }
 .mi-desc { color: var(--muted); font-size: 0.9rem; margin-top: 0.35rem; }
 .group-foot { margin-top: 1.5rem; color: var(--muted-2); font-size: 0.82rem; text-align: right; font-style: italic; }
 
-/* ===== MENU IN PICTURES ===== */
-.menu-cards { margin-top: 4rem; }
-.menu-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
-.menu-cards-grid img { width: 100%; height: auto; display: block; border-radius: var(--radius); border: 1px solid var(--line); transition: transform 0.2s ease; }
-.menu-cards-grid a:hover img { transform: scale(1.01); }
-
 /* ===== REVIEWS ===== */
 .reviews {
   background: var(--bg-2);
