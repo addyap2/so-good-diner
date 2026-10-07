@@ -901,3 +901,8 @@ section { position: relative; }
 @media (max-width: 860px) {
   .hero-video { object-position: 50% 65%; }
 }
+
+/* Give the desktop headline a little more breathing room beside the video. */
+@media (min-width: 861px) {
+  .hero-inner { left: clamp(-28px, -2vw, -16px); }
+}
