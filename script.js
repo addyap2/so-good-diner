@@ -210,47 +210,37 @@ if ('IntersectionObserver' in window) {
   revealEls.forEach((el) => el.classList.add('is-visible'));
 }
 
-// ===== Section-separator food conveyor (scroll-linked line-art) =====
+// ===== Section-separator food conveyor (icons glide along the line) =====
 (() => {
   const bands = Array.from(document.querySelectorAll('.band'));
   if (!bands.length) return;
 
   const ICONS = ['burger', 'fries', 'cup', 'kumpir', 'jar'];
+  const SPEED = 55; // px per second
   const oneSet = () =>
     ICONS.map((n) => `<svg class="band-ico"><use href="#deco-${n}" /></svg>`).join('');
 
-  const states = [];
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   bands.forEach((band, bi) => {
     const track = document.createElement('div');
     track.className = 'band-track';
     track.setAttribute('aria-hidden', 'true');
-    track.innerHTML = oneSet().repeat(3); // temporary, to measure one set's width
+    track.innerHTML = oneSet().repeat(3); // temp, to measure one set's repeat period
     band.appendChild(track);
 
     const icos = track.querySelectorAll('.band-ico');
-    let setW = (icos[ICONS.length]?.offsetLeft || 0) - (icos[0]?.offsetLeft || 0);
-    if (!setW || setW < 1) setW = 260;
+    // distance between the same icon in consecutive sets = exact repeat period
+    let setW = icos[ICONS.length].getBoundingClientRect().left - icos[0].getBoundingClientRect().left;
+    if (!setW || setW < 1) setW = 340;
 
-    // Repeat enough sets to always cover the viewport plus one set of overscroll
+    // Repeat enough sets to always cover the viewport plus one full set
     const need = Math.ceil((window.innerWidth + setW) / setW) + 1;
     track.innerHTML = oneSet().repeat(need);
 
-    states.push({ band, setW, phase: bi * 71 }); // phase offset so bands differ
+    band.style.setProperty('--band-set', setW.toFixed(1) + 'px');
+    band.style.setProperty('--band-dur', (setW / SPEED).toFixed(2) + 's');
+    if (bi % 2 === 1) band.classList.add('band--rtl'); // alternate direction
+    if (reduce) track.style.animation = 'none';
   });
-
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce) return; // leave the icons static on the rail
-
-  const FACTOR = 0.2; // icons drift ~1px per 5px of scroll
-  let raf = 0;
-  const update = () => {
-    raf = 0;
-    const y = window.scrollY || 0;
-    states.forEach((s) => {
-      const shift = -(((y * FACTOR) + s.phase) % s.setW);
-      s.band.style.setProperty('--band-shift', shift.toFixed(1) + 'px');
-    });
-  };
-  update();
-  window.addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(update); }, { passive: true });
 })();
