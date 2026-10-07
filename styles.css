@@ -906,3 +906,29 @@ section { position: relative; }
 @media (min-width: 861px) {
   .hero-inner { left: clamp(-28px, -2vw, -16px); }
 }
+
+/* Balance the copy against the food footage and keep the right side bright. */
+@media (min-width: 861px) {
+  .hero { align-items: center; }
+  .hero-inner {
+    left: 0;
+    max-width: none;
+    padding: 2.5rem clamp(1.5rem, 4vw, 4rem) 3rem;
+  }
+  .hero-inner > * { max-width: 46%; }
+  .hero-headline { font-size: clamp(2.6rem, 5.2vw, 5rem); margin-bottom: 1.2rem; }
+  .hero-eyebrow { letter-spacing: 0.2em; margin-bottom: 1rem; }
+  .hero-sub { font-size: clamp(1rem, 1.3vw, 1.15rem); }
+  .hero-cta { margin-top: 1.5rem; }
+  .hero-proof { margin-top: 1.25rem; }
+  .hero-scrim {
+    background:
+      linear-gradient(90deg, rgba(8,6,4,.92) 0%, rgba(8,6,4,.74) 37%, rgba(8,6,4,.08) 56%, transparent 72%),
+      linear-gradient(to top, rgba(8,6,4,.35), transparent 30%);
+  }
+  .hero-vignette { opacity: .35; }
+  .hero-spot { opacity: .3; }
+}
+@media (max-width: 860px) {
+  .hero-video { object-position: 50% 50%; }
+}
