@@ -132,63 +132,6 @@ if (galleryVideos.length && 'IntersectionObserver' in window) {
   galleryVideos.forEach((v) => playObserver.observe(v));
 }
 
-// ===== Hero: cursor light + parallax, magnetic CTA, scroll push-in =====
-(() => {
-  const hero = document.querySelector('.hero');
-  if (!hero) return;
-
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-
-  const media = hero.querySelector('.hero-media');
-  const inner = hero.querySelector('.hero-inner');
-  const magnet = hero.querySelector('[data-magnetic]');
-
-  // Cursor-tracked key light only (the background stays fixed — no parallax).
-  if (finePointer && !reduce) {
-    let px = 0.72, py = 0.22, raf = 0;
-    const apply = () => {
-      raf = 0;
-      hero.style.setProperty('--mx', (px * 100).toFixed(2) + '%');
-      hero.style.setProperty('--my', (py * 100).toFixed(2) + '%');
-    };
-    hero.addEventListener('pointermove', (e) => {
-      const r = hero.getBoundingClientRect();
-      px = (e.clientX - r.left) / r.width;
-      py = (e.clientY - r.top) / r.height;
-      if (!raf) raf = requestAnimationFrame(apply);
-    });
-
-    // Magnetic primary CTA
-    if (magnet) {
-      const strength = 0.35;
-      magnet.addEventListener('pointermove', (e) => {
-        const r = magnet.getBoundingClientRect();
-        const mx = e.clientX - (r.left + r.width / 2);
-        const my = e.clientY - (r.top + r.height / 2);
-        magnet.style.transform = `translate(${(mx * strength).toFixed(1)}px, ${(my * strength).toFixed(1)}px)`;
-      });
-      magnet.addEventListener('pointerleave', () => { magnet.style.transform = ''; });
-    }
-  }
-
-  // Scroll: cinematic push-in + copy drift (individual scale/translate, rAF-throttled)
-  if (!reduce) {
-    let sraf = 0;
-    const onHeroScroll = () => {
-      sraf = 0;
-      const p = Math.min(1, Math.max(0, window.scrollY / window.innerHeight));
-      if (media) media.style.scale = (1 + p * 0.04).toFixed(3);
-      if (inner) {
-        inner.style.translate = `0 ${(p * -60).toFixed(1)}px`;
-        inner.style.opacity = (1 - p * 0.9).toFixed(2);
-      }
-    };
-    onHeroScroll();
-    window.addEventListener('scroll', () => { if (!sraf) sraf = requestAnimationFrame(onHeroScroll); }, { passive: true });
-  }
-})();
-
 // ===== Reveal on scroll =====
 const revealEls = document.querySelectorAll(
   '.quality-card, .menu-group, .review, .gallery-grid video, .contact-info, .contact-map'

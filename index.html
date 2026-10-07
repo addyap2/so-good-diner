@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261007potato-balance" />
+  <link rel="stylesheet" href="styles.css?v=20261007split" />
 </head>
 <body>
   <!-- ===== DECORATIVE FOOD LINE-ART SPRITE (defined once, reused via <use>) ===== -->
@@ -89,37 +89,16 @@
     </button>
   </header>
 
-  <!-- ===== HERO — cinematic full-bleed ===== -->
-  <section class="hero" id="hero">
-    <!-- Full-bleed footage + cinematic grade -->
-    <div class="hero-stage" aria-hidden="true">
+  <!-- ===== HERO — copy and full portrait footage ===== -->
+  <section class="hero hero-split" id="hero">
+    <div class="hero-stage">
       <div class="hero-media">
-        <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-fréjus.jpg?v=potato-balance"></video>
-        <script>
-          /* Pick one silent, cropped source before loading the video.
-             Phones get the portrait version; desktop gets the wide composition. */
-          (function () {
-            var v = document.querySelector('.hero-video');
-            if (!v) return;
-            var mobile = window.matchMedia('(max-width: 860px)').matches;
-            var s = document.createElement('source');
-            s.src = 'assets/video/hero-fréjus' + (mobile ? '-mobile' : '') + '.mp4?v=potato-balance';
-            v.poster = 'assets/img/hero-fréjus' + (mobile ? '-mobile' : '') + '.jpg?v=potato-balance';
-            s.type = 'video/mp4';
-            v.appendChild(s);
-            v.load();
-            var p = v.play();
-            if (p && p.catch) p.catch(function () {});
-          })();
-        </script>
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/img/hero-portrait.jpg">
+          <source src="assets/video/hero-portrait.mp4" type="video/mp4" />
+        </video>
       </div>
-      <div class="hero-scrim"></div>
-      <div class="hero-vignette"></div>
-      <div class="hero-spot"></div>
-      <div class="hero-grain"></div>
     </div>
 
-    <!-- Editorial copy, anchored lower-left like a film poster -->
     <div class="hero-inner">
       <p class="hero-eyebrow" data-reveal style="--d:.15s">
         <span class="hero-eyebrow-dot"></span>
@@ -134,8 +113,10 @@
 
       <p class="hero-sub" data-reveal style="--d:.72s" data-en="Gourmet burgers &amp; generous kumpir — baker's bread, butcher's meat, prepared before your eyes." data-it="Burger gourmet e kumpir generosi — pane del fornaio, carne del macellaio, preparati davanti ai tuoi occhi." data-es="Hamburguesas gourmet y kumpir generosos — pan de panadería, carne de carnicería, preparados ante tus ojos.">Burgers gourmands &amp; kumpir généreux — pain du boulanger, viande du boucher, préparés sous vos yeux.</p>
 
+      <a class="hero-location" href="https://maps.google.com/?q=65+Rue+du+Général+de+Gaulle+83600+Fréjus" target="_blank" rel="noopener">65 Rue du Général de Gaulle, 83600 Fréjus</a>
+
       <div class="hero-cta" data-reveal style="--d:.86s">
-        <a href="#carte" class="btn btn-primary" data-magnetic data-en="See the menu" data-it="Scopri il menu" data-es="Descubre la carta">Découvrir la carte</a>
+        <a href="#carte" class="btn btn-primary" data-en="See the menu" data-it="Scopri il menu" data-es="Descubre la carta">Découvrir la carte</a>
         <a href="https://maps.google.com/?q=65+Rue+du+Général+de+Gaulle+83600+Fréjus" target="_blank" rel="noopener" class="btn btn-ghost" data-en="Get directions" data-it="Come trovarci" data-es="Cómo llegar">Nous trouver</a>
       </div>
 
@@ -145,10 +126,6 @@
       </div>
     </div>
 
-    <a class="hero-scroll" href="#qualite" aria-label="Scroll to content">
-      <span class="hero-scroll-line" aria-hidden="true"></span>
-      <em data-en="Scroll" data-it="Scorri" data-es="Desliza">Défiler</em>
-    </a>
   </section>
 
   <div class="band" aria-hidden="true"></div>
@@ -654,6 +631,6 @@
     <p class="footer-legal" data-en="© <span id=&quot;year&quot;></span> So Good Diner — All rights reserved." data-it="© &lt;span id=&quot;year&quot;&gt;&lt;/span&gt; So Good Diner — Tutti i diritti riservati." data-es="© &lt;span id=&quot;year&quot;&gt;&lt;/span&gt; So Good Diner — Todos los derechos reservados.">© <span id="year"></span> So Good Diner — Tous droits réservés.</p>
   </footer>
 
-  <script src="script.js?v=20261007potato-balance"></script>
+  <script src="script.js?v=20261007split"></script>
 </body>
 </html>
