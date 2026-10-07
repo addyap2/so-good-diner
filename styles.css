@@ -1078,3 +1078,71 @@ section { position: relative; }
 @media (prefers-reduced-motion: reduce) {
   .hero-split .hero-stage { animation: none; transition: none; }
 }
+
+/* Full-name language disclosure: compact trigger, generous dropdown targets. */
+.lang-switch {
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+}
+.lang-trigger {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid rgba(208,169,79,.45);
+  border-radius: 24px;
+  background: rgba(208,169,79,.08);
+  color: var(--text);
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-head);
+  font-size: 14px;
+  white-space: nowrap;
+}
+.lang-trigger::-webkit-details-marker { display: none; }
+.lang-switch .language-name { font-size: inherit; color: var(--text); }
+.lang-globe { width: 20px; height: 20px; color: var(--gold); }
+.lang-chevron { width: 14px; height: 14px; transition: rotate .2s ease; }
+.lang-switch[open] .lang-chevron { rotate: 180deg; }
+.lang-trigger:hover, .lang-switch[open] .lang-trigger { border-color: var(--gold); background: rgba(208,169,79,.16); }
+.lang-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 80;
+  min-width: 176px;
+  padding: 8px;
+  background: #211a14;
+  border: 1px solid rgba(208,169,79,.4);
+  border-radius: 16px;
+  box-shadow: 0 16px 32px rgba(0,0,0,.35);
+}
+.lang-switch:not([open]) .lang-panel { display: none; }
+.lang-switch .lang-panel button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--text);
+  text-shadow: none;
+  text-align: left;
+}
+.lang-switch .lang-check { visibility: hidden; color: var(--gold); font-size: 16px; }
+.lang-switch .is-active .lang-check { visibility: visible; }
+.lang-switch .lang-panel button:hover, .lang-switch .lang-panel button.is-active { background: rgba(208,169,79,.13); color: var(--gold-soft); }
+.lang-trigger:focus-visible, .lang-switch .lang-panel button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+@media (max-width: 400px) {
+  .lang-trigger { padding-inline: 10px; gap: 6px; font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lang-chevron { transition: none; }
+}

@@ -9,7 +9,7 @@ const fillYear = () => {
   if (y) y.textContent = new Date().getFullYear();
 };
 
-const langButtons = Array.from(document.querySelectorAll('.lang-switch button'));
+const langButtons = Array.from(document.querySelectorAll('.lang-switch [data-lang]'));
 
 function setLang(lang) {
   const l = supportedLanguages.includes(lang) ? lang : 'fr';
@@ -26,7 +26,13 @@ function setLang(lang) {
   }[l];
   document.querySelector('.nav')?.setAttribute('aria-label', labels.navigation);
   document.querySelector('.footer-nav')?.setAttribute('aria-label', labels.footer);
-  document.querySelector('.lang-switch')?.setAttribute('aria-label', labels.language);
+  const languageNames = { fr: 'Français', en: 'English', it: 'Italiano', es: 'Español' };
+  const languageName = document.querySelector('.language-name');
+  if (languageName) {
+    languageName.textContent = languageNames[l];
+    languageName.lang = l;
+  }
+  document.querySelector('.lang-trigger')?.setAttribute('aria-label', labels.language + ': ' + languageNames[l]);
   const menuToggle = document.querySelector('.nav-toggle');
   menuToggle?.setAttribute('aria-label', menuToggle.getAttribute('aria-expanded') === 'true' ? labels.close : labels.open);
   document.querySelector('.hero-scroll')?.setAttribute('aria-label', labels.scroll);
@@ -53,9 +59,34 @@ function setLang(lang) {
   fillYear();
 }
 
-langButtons.forEach((b) =>
-  b.addEventListener('click', () => setLang(b.dataset.lang))
-);
+const languagePicker = document.querySelector('.lang-switch');
+const languageTrigger = document.querySelector('.lang-trigger');
+const closeLanguagePicker = (restoreFocus = false) => {
+  languagePicker.open = false;
+  languageTrigger.setAttribute('aria-expanded', 'false');
+  if (restoreFocus) languageTrigger.focus();
+};
+langButtons.forEach((b) => b.addEventListener('click', () => {
+  setLang(b.dataset.lang);
+  closeLanguagePicker(true);
+}));
+languagePicker.addEventListener('toggle', () => {
+  languageTrigger.setAttribute('aria-expanded', String(languagePicker.open));
+});
+document.addEventListener('click', (e) => {
+  if (languagePicker.open && !languagePicker.contains(e.target)) closeLanguagePicker();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && languagePicker.open) {
+    e.preventDefault();
+    closeLanguagePicker(true);
+  }
+});
+languagePicker.addEventListener('focusout', () => {
+  requestAnimationFrame(() => {
+    if (!languagePicker.contains(document.activeElement)) closeLanguagePicker();
+  });
+});
 
 // Use the first supported browser language, with French as the fallback.
 // A visitor's own switch is remembered and takes precedence.

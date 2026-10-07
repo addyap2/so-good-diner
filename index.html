@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261007groove" />
+  <link rel="stylesheet" href="styles.css?v=20261007language-dropdown" />
 </head>
 <body>
   <!-- ===== DECORATIVE FOOD LINE-ART SPRITE (defined once, reused via <use>) ===== -->
@@ -75,15 +75,19 @@
       <a href="#faq" data-en="FAQ" data-it="FAQ" data-es="Preguntas frecuentes">FAQ</a>
       <a href="#contact" data-en="Contact" data-it="Contatti" data-es="Contacto">Contact</a>
     </nav>
-    <div class="lang-switch" role="group" aria-label="Langue / Language">
-      <button data-lang="fr" class="is-active" aria-pressed="true" lang="fr" title="Français">FR</button>
-      <span aria-hidden="true">·</span>
-      <button data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
-      <span aria-hidden="true">·</span>
-      <button data-lang="it" aria-pressed="false" lang="it" title="Italiano">IT</button>
-      <span aria-hidden="true">·</span>
-      <button data-lang="es" aria-pressed="false" lang="es" title="Español">ES</button>
-    </div>
+    <details class="lang-switch">
+      <summary class="lang-trigger" aria-controls="language-options" aria-expanded="false">
+        <svg class="lang-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 6h14M5 18h14"/></svg>
+        <span class="language-name">Français</span>
+        <svg class="lang-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
+      </summary>
+      <div class="lang-panel" id="language-options">
+        <button type="button" data-lang="fr" class="is-active" aria-pressed="true" lang="fr">Français<span class="lang-check" aria-hidden="true">✓</span></button>
+        <button type="button" data-lang="en" aria-pressed="false" lang="en">English<span class="lang-check" aria-hidden="true">✓</span></button>
+        <button type="button" data-lang="it" aria-pressed="false" lang="it">Italiano<span class="lang-check" aria-hidden="true">✓</span></button>
+        <button type="button" data-lang="es" aria-pressed="false" lang="es">Español<span class="lang-check" aria-hidden="true">✓</span></button>
+      </div>
+    </details>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -632,6 +636,6 @@
     <p class="footer-legal" data-en="© <span id=&quot;year&quot;></span> So Good Diner — All rights reserved." data-it="© &lt;span id=&quot;year&quot;&gt;&lt;/span&gt; So Good Diner — Tutti i diritti riservati." data-es="© &lt;span id=&quot;year&quot;&gt;&lt;/span&gt; So Good Diner — Todos los derechos reservados.">© <span id="year"></span> So Good Diner — Tous droits réservés.</p>
   </footer>
 
-  <script src="script.js?v=20261007split"></script>
+  <script src="script.js?v=20261007language-dropdown"></script>
 </body>
 </html>
