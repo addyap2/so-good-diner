@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261007languages" />
+  <link rel="stylesheet" href="styles.css?v=20261007hero" />
 </head>
 <body>
   <!-- ===== DECORATIVE FOOD LINE-ART SPRITE (defined once, reused via <use>) ===== -->
@@ -94,18 +94,18 @@
     <!-- Full-bleed footage + cinematic grade -->
     <div class="hero-stage" aria-hidden="true">
       <div class="hero-media">
-        <video class="hero-video" autoplay muted playsinline preload="auto" poster="assets/img/hero.jpg"></video>
+        <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-fréjus.jpg"></video>
         <script>
-          /* Pick the lightest hero source (VP9/WebM): phones get a smaller
-             720p encode, desktop the 1080p one. Runs during parse, before
-             any fetch, so there is no double download. */
+          /* Pick one silent, cropped source before loading the video.
+             Phones get the portrait version; desktop gets the wide composition. */
           (function () {
             var v = document.querySelector('.hero-video');
             if (!v) return;
-            var mobile = window.matchMedia('(max-width: 760px)').matches;
+            var mobile = window.matchMedia('(max-width: 860px)').matches;
             var s = document.createElement('source');
-            s.src = 'assets/video/clip-2-hero' + (mobile ? '-mobile' : '') + '.webm';
-            s.type = 'video/webm';
+            s.src = 'assets/video/hero-fréjus' + (mobile ? '-mobile' : '') + '.mp4';
+            v.poster = 'assets/img/hero-fréjus' + (mobile ? '-mobile' : '') + '.jpg';
+            s.type = 'video/mp4';
             v.appendChild(s);
             v.load();
             var p = v.play();
@@ -654,6 +654,6 @@
     <p class="footer-legal" data-en="© <span id=&quot;year&quot;></span> So Good Diner — All rights reserved." data-it="© &lt;span id=&quot;year&quot;&gt;&lt;/span&gt; So Good Diner — Tutti i diritti riservati." data-es="© &lt;span id=&quot;year&quot;&gt;&lt;/span&gt; So Good Diner — Todos los derechos reservados.">© <span id="year"></span> So Good Diner — Tous droits réservés.</p>
   </footer>
 
-  <script src="script.js?v=20261007languages"></script>
+  <script src="script.js?v=20261007hero"></script>
 </body>
 </html>

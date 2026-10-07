@@ -196,14 +196,12 @@ em { font-style: italic; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Center for the kitchen footage; pans up to the storefront sign (which sits
-     at the top of the portrait frame) as the camera arrives near the end. */
-  object-position: 50% 50%;
-  transition: object-position 1.8s ease;
+  /* Preserve the sharp subject on the right of the desktop composition. */
+  object-position: 100% 50%;
   display: block;
   filter: saturate(1.06) contrast(1.05) brightness(0.92);
 }
-.hero.at-sign .hero-video { object-position: 50% 6%; }
+
 
 /* Warm-to-shadow cinematic scrim, weighted to the lower-left copy */
 .hero-scrim {
@@ -896,4 +894,10 @@ section { position: relative; }
   .header-rule { display: none; }
   .lang-switch { gap: 0; }
   .lang-switch button { min-width: 29px; }
+}
+
+/* The new hero composition already provides its own framing. */
+.hero-media { inset: 0; scale: 1; animation: none; }
+@media (max-width: 860px) {
+  .hero-video { object-position: 50% 35%; }
 }

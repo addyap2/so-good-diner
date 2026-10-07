@@ -144,27 +144,6 @@ if (galleryVideos.length && 'IntersectionObserver' in window) {
   const inner = hero.querySelector('.hero-inner');
   const magnet = hero.querySelector('[data-magnetic]');
 
-  // Hero footage: loop the whole sequence — play the clip while panning the
-  // crop up to the "So Good Diner" storefront sign as the camera arrives, and
-  // restart at the sign (before the footage moves on), resetting the crop.
-  const heroVideo = hero.querySelector('.hero-video');
-  if (heroVideo) {
-    const PAN_AT   = 14.3;   // camera nears the storefront -> pan crop up to the sign
-    const LOOP_END = 16.4;   // clean, readable full sign -> restart here
-
-    const onTime = () => {
-      if (!heroVideo.duration) return;
-      const t = heroVideo.currentTime;
-      if (t >= LOOP_END) {
-        hero.classList.remove('at-sign');       // reset crop to centre for the kitchen footage
-        try { heroVideo.currentTime = 0; } catch (e) {}
-      } else if (t >= PAN_AT) {
-        hero.classList.add('at-sign');          // pan crop up to the sign
-      }
-    };
-    heroVideo.addEventListener('timeupdate', onTime);
-  }
-
   // Cursor-tracked key light only (the background stays fixed — no parallax).
   if (finePointer && !reduce) {
     let px = 0.72, py = 0.22, raf = 0;
@@ -199,7 +178,7 @@ if (galleryVideos.length && 'IntersectionObserver' in window) {
     const onHeroScroll = () => {
       sraf = 0;
       const p = Math.min(1, Math.max(0, window.scrollY / window.innerHeight));
-      if (media) media.style.scale = (1.06 + p * 0.12).toFixed(3);
+      if (media) media.style.scale = (1 + p * 0.04).toFixed(3);
       if (inner) {
         inner.style.translate = `0 ${(p * -60).toFixed(1)}px`;
         inner.style.opacity = (1 - p * 0.9).toFixed(2);
