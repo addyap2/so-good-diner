@@ -885,3 +885,15 @@ section { position: relative; }
   .hero-grain, .hero-spot { display: none; }
   .hl-in.foil { color: var(--gold-soft); -webkit-text-fill-color: currentColor; }
 }
+
+/* Four compact language controls stay accessible on narrow phones. */
+.lang-switch { gap: 0.2rem; flex-shrink: 0; }
+.lang-switch button { min-width: 30px; min-height: 44px; }
+.lang-switch button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
+@media (max-width: 400px) {
+  .site-header { gap: 0.45rem; padding-inline: 0.75rem; }
+  .brand-logo { max-width: 90px; object-fit: contain; }
+  .header-rule { display: none; }
+  .lang-switch { gap: 0; }
+  .lang-switch button { min-width: 29px; }
+}

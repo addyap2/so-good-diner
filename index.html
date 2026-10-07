@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261007154703" />
+  <link rel="stylesheet" href="styles.css?v=20261007languages" />
 </head>
 <body>
   <!-- ===== DECORATIVE FOOD LINE-ART SPRITE (defined once, reused via <use>) ===== -->
@@ -68,17 +68,21 @@
     </a>
     <span class="header-rule" aria-hidden="true"></span>
     <nav class="nav" aria-label="Navigation">
-      <a href="#carte" data-en="Menu">La Carte</a>
-      <a href="#qualite" data-en="Our House">Notre maison</a>
-      <a href="#avis" data-en="Reviews">Avis</a>
-      <a href="#galerie" data-en="Gallery">Galerie</a>
-      <a href="#faq" data-en="FAQ">FAQ</a>
-      <a href="#contact" data-en="Contact">Contact</a>
+      <a href="#carte" data-en="Menu" data-it="Menu" data-es="Carta">La Carte</a>
+      <a href="#qualite" data-en="Our House" data-it="La nostra casa" data-es="Nuestra casa">Notre maison</a>
+      <a href="#avis" data-en="Reviews" data-it="Recensioni" data-es="Opiniones">Avis</a>
+      <a href="#galerie" data-en="Gallery" data-it="Galleria" data-es="Galería">Galerie</a>
+      <a href="#faq" data-en="FAQ" data-it="FAQ" data-es="Preguntas frecuentes">FAQ</a>
+      <a href="#contact" data-en="Contact" data-it="Contatti" data-es="Contacto">Contact</a>
     </nav>
     <div class="lang-switch" role="group" aria-label="Langue / Language">
-      <button data-lang="fr" class="is-active" aria-pressed="true">FR</button>
+      <button data-lang="fr" class="is-active" aria-pressed="true" lang="fr" title="Français">FR</button>
       <span aria-hidden="true">·</span>
-      <button data-lang="en" aria-pressed="false">EN</button>
+      <button data-lang="en" aria-pressed="false" lang="en" title="English">EN</button>
+      <span aria-hidden="true">·</span>
+      <button data-lang="it" aria-pressed="false" lang="it" title="Italiano">IT</button>
+      <span aria-hidden="true">·</span>
+      <button data-lang="es" aria-pressed="false" lang="es" title="Español">ES</button>
     </div>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -119,31 +123,31 @@
     <div class="hero-inner">
       <p class="hero-eyebrow" data-reveal style="--d:.15s">
         <span class="hero-eyebrow-dot"></span>
-        <span data-en="Fréjus · Burgers · Kumpir · Snacking">Fréjus · Burgers · Kumpir · Snacking</span>
+        <span data-en="Fréjus · Burgers · Kumpir · Snacking" data-it="Fréjus · Burger · Kumpir · Spuntini" data-es="Fréjus · Hamburguesas · Kumpir · Aperitivos">Fréjus · Burgers · Kumpir · Snacking</span>
       </p>
 
       <h1 class="hero-headline">
-        <span class="hl-line"><span class="hl-in" style="--d:.30s" data-en="Seared to order,">Grillé minute,</span></span>
-        <span class="hl-line"><span class="hl-in" style="--d:.40s" data-en="served">servi</span></span>
-        <span class="hl-line"><span class="hl-in foil" style="--d:.50s" data-en="so good.">so good.</span></span>
+        <span class="hl-line"><span class="hl-in" style="--d:.30s" data-en="Seared to order," data-it="Grigliato al momento," data-es="A la parrilla al momento,">Grillé minute,</span></span>
+        <span class="hl-line"><span class="hl-in" style="--d:.40s" data-en="served" data-it="servito" data-es="servido">servi</span></span>
+        <span class="hl-line"><span class="hl-in foil" style="--d:.50s" data-en="so good." data-it="so good." data-es="so good.">so good.</span></span>
       </h1>
 
-      <p class="hero-sub" data-reveal style="--d:.72s" data-en="Gourmet burgers &amp; generous kumpir — baker's bread, butcher's meat, prepared before your eyes.">Burgers gourmands &amp; kumpir généreux — pain du boulanger, viande du boucher, préparés sous vos yeux.</p>
+      <p class="hero-sub" data-reveal style="--d:.72s" data-en="Gourmet burgers &amp; generous kumpir — baker's bread, butcher's meat, prepared before your eyes." data-it="Burger gourmet e kumpir generosi — pane del fornaio, carne del macellaio, preparati davanti ai tuoi occhi." data-es="Hamburguesas gourmet y kumpir generosos — pan de panadería, carne de carnicería, preparados ante tus ojos.">Burgers gourmands &amp; kumpir généreux — pain du boulanger, viande du boucher, préparés sous vos yeux.</p>
 
       <div class="hero-cta" data-reveal style="--d:.86s">
-        <a href="#carte" class="btn btn-primary" data-magnetic data-en="See the menu">Découvrir la carte</a>
-        <a href="https://maps.google.com/?q=65+Rue+du+Général+de+Gaulle+83600+Fréjus" target="_blank" rel="noopener" class="btn btn-ghost" data-en="Get directions">Nous trouver</a>
+        <a href="#carte" class="btn btn-primary" data-magnetic data-en="See the menu" data-it="Scopri il menu" data-es="Descubre la carta">Découvrir la carte</a>
+        <a href="https://maps.google.com/?q=65+Rue+du+Général+de+Gaulle+83600+Fréjus" target="_blank" rel="noopener" class="btn btn-ghost" data-en="Get directions" data-it="Come trovarci" data-es="Cómo llegar">Nous trouver</a>
       </div>
 
       <div class="hero-proof" data-reveal style="--d:1s">
         <span class="hero-stars" aria-hidden="true">★★★★★</span>
-        <span data-en="Loved in Fréjus · 100% homemade">Adoré à Fréjus · 100% fait maison</span>
+        <span data-en="Loved in Fréjus · 100% homemade" data-it="Amato a Fréjus · 100% fatto in casa" data-es="Muy querido en Fréjus · 100% casero">Adoré à Fréjus · 100% fait maison</span>
       </div>
     </div>
 
     <a class="hero-scroll" href="#qualite" aria-label="Scroll to content">
       <span class="hero-scroll-line" aria-hidden="true"></span>
-      <em data-en="Scroll">Défiler</em>
+      <em data-en="Scroll" data-it="Scorri" data-es="Desliza">Défiler</em>
     </a>
   </section>
 
@@ -156,9 +160,9 @@
       <svg class="deco deco--kumpir" style="--d:1s"><use href="#deco-kumpir" /></svg>
     </div>
     <div class="quality-inner">
-      <p class="section-eyebrow" data-en="Our House">Notre maison</p>
-      <h2 class="section-title" data-en="Homemade, with fresh ingredients">Fait maison, avec des produits frais</h2>
-      <p class="section-lead" data-en="At So Good Diner, everything is made in-house, with a smile. The bread comes from the local bakery every day, the fresh meat from the butcher, and our sauces are made on site. Here you're welcomed like family — and you can taste it in every plate.">
+      <p class="section-eyebrow" data-en="Our House" data-it="La nostra casa" data-es="Nuestra casa">Notre maison</p>
+      <h2 class="section-title" data-en="Homemade, with fresh ingredients" data-it="Fatto in casa, con ingredienti freschi" data-es="Casero, con ingredientes frescos">Fait maison, avec des produits frais</h2>
+      <p class="section-lead" data-en="At So Good Diner, everything is made in-house, with a smile. The bread comes from the local bakery every day, the fresh meat from the butcher, and our sauces are made on site. Here you're welcomed like family — and you can taste it in every plate." data-it="Al So Good Diner, tutto è fatto in casa, con il sorriso. Il pane arriva ogni giorno dal fornaio del quartiere, la carne fresca dal macellaio e le nostre salse sono preparate sul posto. Qui ti accogliamo come in famiglia — e si sente in ogni piatto." data-es="En So Good Diner, todo se hace en casa, con una sonrisa. El pan viene cada día de la panadería del barrio, la carne fresca de la carnicería y nuestras salsas se preparan aquí. Te recibimos como en familia — y se nota en cada plato.">
         Au So Good Diner, tout est fait maison, avec le sourire. Le pain vient chaque jour du
         boulanger du quartier, la viande fraîche du boucher, et nos sauces sont préparées sur place.
         Ici, on vous accueille comme en famille — et ça se sent dans l'assiette.
@@ -166,23 +170,23 @@
       <div class="quality-grid">
         <article class="quality-card">
           <span class="quality-icon">🥖</span>
-          <h3 data-en="Artisan bread">Pain artisanal</h3>
-          <p data-en="Bread comes straight from the baker, fresh every day.">Le pain vient directement du boulanger, frais chaque jour.</p>
+          <h3 data-en="Artisan bread" data-it="Pane artigianale" data-es="Pan artesanal">Pain artisanal</h3>
+          <p data-en="Bread comes straight from the baker, fresh every day." data-it="Il pane arriva direttamente dal fornaio, fresco ogni giorno." data-es="El pan viene directamente de la panadería, fresco cada día.">Le pain vient directement du boulanger, frais chaque jour.</p>
         </article>
         <article class="quality-card">
           <span class="quality-icon">🥩</span>
-          <h3 data-en="Butcher's meat">Viande du boucher</h3>
-          <p data-en="Fresh meat, selected at the butcher and prepared on site.">Une viande fraîche, sélectionnée chez le boucher et travaillée sur place.</p>
+          <h3 data-en="Butcher's meat" data-it="Carne del macellaio" data-es="Carne de carnicería">Viande du boucher</h3>
+          <p data-en="Fresh meat, selected at the butcher and prepared on site." data-it="Carne fresca, selezionata dal macellaio e preparata sul posto." data-es="Carne fresca, seleccionada en la carnicería y preparada aquí.">Une viande fraîche, sélectionnée chez le boucher et travaillée sur place.</p>
         </article>
         <article class="quality-card">
           <span class="quality-icon">🧑‍🍳</span>
-          <h3 data-en="Prepared before you">Préparé devant vous</h3>
-          <p data-en="You can watch the cooks prepare the steaks. Quality you can see.">On voit les cuistots préparer les steaks. Un gage de qualité assumé.</p>
+          <h3 data-en="Prepared before you" data-it="Preparato davanti a te" data-es="Preparado ante ti">Préparé devant vous</h3>
+          <p data-en="You can watch the cooks prepare the steaks. Quality you can see." data-it="Puoi vedere i cuochi preparare gli hamburger. Una qualità che si vede." data-es="Puedes ver a los cocineros preparar las hamburguesas. Una calidad que se ve.">On voit les cuistots préparer les steaks. Un gage de qualité assumé.</p>
         </article>
         <article class="quality-card">
           <span class="quality-icon">🫙</span>
-          <h3 data-en="Homemade sauces">Sauces maison</h3>
-          <p data-en="Homemade sauces that make all the difference, in every bite.">Des sauces maison qui font toute la différence, à chaque bouchée.</p>
+          <h3 data-en="Homemade sauces" data-it="Salse fatte in casa" data-es="Salsas caseras">Sauces maison</h3>
+          <p data-en="Homemade sauces that make all the difference, in every bite." data-it="Salse fatte in casa che fanno la differenza, a ogni morso." data-es="Salsas caseras que marcan la diferencia en cada bocado.">Des sauces maison qui font toute la différence, à chaque bouchée.</p>
         </article>
       </div>
     </div>
@@ -193,287 +197,287 @@
   <!-- ===== CARTE ===== -->
   <section class="menu" id="carte">
     <div class="menu-head">
-      <p class="section-eyebrow" data-en="The Menu">La Carte</p>
-      <h2 class="section-title" data-en="Sandwiches · Boxes · Snacking · Desserts">Sandwichs · Boxs · Snacking · Desserts</h2>
+      <p class="section-eyebrow" data-en="The Menu" data-it="Il menu" data-es="La carta">La Carte</p>
+      <h2 class="section-title" data-en="Sandwiches · Boxes · Snacking · Desserts" data-it="Panini · Box · Spuntini · Dolci" data-es="Bocadillos · Boxes · Aperitivos · Postres">Sandwichs · Boxs · Snacking · Desserts</h2>
       <div class="drinks-band">
-        <span data-en="Soda <b>2.00€</b>">Soda <b>2,00€</b></span>
-        <span data-en="Water <b>1.00€</b>">Eau <b>1,00€</b></span>
-        <span data-en="Sparkling water <b>1.50€</b>">Eau gazeuse <b>1,50€</b></span>
+        <span data-en="Soda <b>2.00€</b>" data-it="Bibita &lt;b&gt;2,00€&lt;/b&gt;" data-es="Refresco &lt;b&gt;2,00€&lt;/b&gt;">Soda <b>2,00€</b></span>
+        <span data-en="Water <b>1.00€</b>" data-it="Acqua &lt;b&gt;1,00€&lt;/b&gt;" data-es="Agua &lt;b&gt;1,00€&lt;/b&gt;">Eau <b>1,00€</b></span>
+        <span data-en="Sparkling water <b>1.50€</b>" data-it="Acqua frizzante &lt;b&gt;1,50€&lt;/b&gt;" data-es="Agua con gas &lt;b&gt;1,50€&lt;/b&gt;">Eau gazeuse <b>1,50€</b></span>
       </div>
     </div>
 
     <!-- Filtres -->
     <nav class="menu-filters" aria-label="Catégories">
-      <button class="chip is-active" data-filter="all" data-en="All">Tout</button>
-      <button class="chip" data-filter="sandwichs" data-en="Sandwiches &amp; Paninis">Sandwichs &amp; Paninis</button>
-      <button class="chip" data-filter="burgers" data-en="Burgers &amp; Wraps">Burgers &amp; Wraps</button>
-      <button class="chip" data-filter="kumpir" data-en="Kumpir">Kumpir</button>
-      <button class="chip" data-filter="boxs" data-en="Boxes">Boxs</button>
-      <button class="chip" data-filter="snacking" data-en="Snacking">Snacking</button>
-      <button class="chip" data-filter="menus" data-en="Meals">Menus</button>
-      <button class="chip" data-filter="desserts" data-en="Desserts">Desserts</button>
+      <button class="chip is-active" data-filter="all" data-en="All" data-it="Tutto" data-es="Todo">Tout</button>
+      <button class="chip" data-filter="sandwichs" data-en="Sandwiches &amp; Paninis" data-it="Sandwich e panini" data-es="Bocadillos y paninis">Sandwichs &amp; Paninis</button>
+      <button class="chip" data-filter="burgers" data-en="Burgers &amp; Wraps" data-it="Burger e wrap" data-es="Hamburguesas y wraps">Burgers &amp; Wraps</button>
+      <button class="chip" data-filter="kumpir" data-en="Kumpir" data-it="Kumpir" data-es="Kumpir">Kumpir</button>
+      <button class="chip" data-filter="boxs" data-en="Boxes" data-it="Box" data-es="Boxes">Boxs</button>
+      <button class="chip" data-filter="snacking" data-en="Snacking" data-it="Spuntini" data-es="Aperitivos">Snacking</button>
+      <button class="chip" data-filter="menus" data-en="Meals" data-it="Menu completi" data-es="Menús">Menus</button>
+      <button class="chip" data-filter="desserts" data-en="Desserts" data-it="Dolci" data-es="Postres">Desserts</button>
     </nav>
 
     <div class="menu-groups">
 
       <!-- SANDWICHS & PANINIS -->
       <section class="menu-group" data-cat="sandwichs">
-        <h3 class="group-title"><span class="gt-main"><span class="cat-ico" aria-hidden="true">🥪</span><span data-en="Sandwiches &amp; Paninis">Sandwichs &amp; Paninis</span></span></h3>
+        <h3 class="group-title"><span class="gt-main"><span class="cat-ico" aria-hidden="true">🥪</span><span data-en="Sandwiches &amp; Paninis" data-it="Sandwich e panini" data-es="Bocadillos y paninis">Sandwichs &amp; Paninis</span></span></h3>
         <ul class="menu-list">
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">Philly Cheese Steak</span><span class="mi-price">13,50€ <em data-en="/ meal 16,50€">/ menu 16,50€</em></span></div>
-            <p class="mi-desc" data-en="Sub roll, beef, peppers, caramelised onions, cheese, salad, mayonnaise.">Pain sous-marin, bœuf, poivrons, oignons caramélisés, fromage, salade, mayonnaise.</p>
+            <div class="mi-head"><span class="mi-name">Philly Cheese Steak</span><span class="mi-price">13,50€ <em data-en="/ meal 16,50€" data-it="/ menu 16,50€" data-es="/ menú 16,50€">/ menu 16,50€</em></span></div>
+            <p class="mi-desc" data-en="Sub roll, beef, peppers, caramelised onions, cheese, salad, mayonnaise." data-it="Pane lungo, manzo, peperoni, cipolle caramellate, formaggio, lattuga, maionese." data-es="Pan alargado, ternera, pimientos, cebolla caramelizada, queso, lechuga, mayonesa.">Pain sous-marin, bœuf, poivrons, oignons caramélisés, fromage, salade, mayonnaise.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">Philly Cheese Chicken</span><span class="mi-price">13,50€ <em data-en="/ meal 16,50€">/ menu 16,50€</em></span></div>
-            <p class="mi-desc" data-en="Sub roll, chicken, peppers, caramelised onions, cheese, mayonnaise.">Pain sous-marin, poulet, poivrons, oignons caramélisés, fromage, mayonnaise.</p>
+            <div class="mi-head"><span class="mi-name">Philly Cheese Chicken</span><span class="mi-price">13,50€ <em data-en="/ meal 16,50€" data-it="/ menu 16,50€" data-es="/ menú 16,50€">/ menu 16,50€</em></span></div>
+            <p class="mi-desc" data-en="Sub roll, chicken, peppers, caramelised onions, cheese, mayonnaise." data-it="Pane lungo, pollo, peperoni, cipolle caramellate, formaggio, maionese." data-es="Pan alargado, pollo, pimientos, cebolla caramelizada, queso, mayonesa.">Pain sous-marin, poulet, poivrons, oignons caramélisés, fromage, mayonnaise.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="Simple American">Américain Simple</span><span class="mi-price">9,00€ <em data-en="/ meal 11,00€">/ menu 11,00€</em></span></div>
-            <p class="mi-desc" data-en="Baguette, 2 steaks, fries, cheddar, salad, tomato, onions, sauce of your choice.">Baguette, 2 steaks, frites, cheddar, salade, tomate, oignons, sauce au choix.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Simple American" data-it="Americano semplice" data-es="Americano clásico">Américain Simple</span><span class="mi-price">9,00€ <em data-en="/ meal 11,00€" data-it="/ menu 11,00€" data-es="/ menú 11,00€">/ menu 11,00€</em></span></div>
+            <p class="mi-desc" data-en="Baguette, 2 steaks, fries, cheddar, salad, tomato, onions, sauce of your choice." data-it="Baguette, 2 hamburger di manzo, patatine fritte, cheddar, lattuga, pomodoro, cipolle, salsa a scelta." data-es="Baguette, 2 hamburguesas de ternera, patatas fritas, cheddar, lechuga, tomate, cebolla, salsa a elegir.">Baguette, 2 steaks, frites, cheddar, salade, tomate, oignons, sauce au choix.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="Bacon American">Américain Bacon</span><span class="mi-price">11,00€ <em data-en="/ meal 13,00€">/ menu 13,00€</em></span></div>
-            <p class="mi-desc" data-en="Baguette, 3 steaks, American-style bacon, salad, tomato, onions, fries, cheddar.">Baguette, 3 steaks, bacon façon américain, salade, tomate, oignons, frites, cheddar.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Bacon American" data-it="Americano con bacon" data-es="Americano con bacon">Américain Bacon</span><span class="mi-price">11,00€ <em data-en="/ meal 13,00€" data-it="/ menu 13,00€" data-es="/ menú 13,00€">/ menu 13,00€</em></span></div>
+            <p class="mi-desc" data-en="Baguette, 3 steaks, American-style bacon, salad, tomato, onions, fries, cheddar." data-it="Baguette, 3 hamburger di manzo, bacon all&#x27;americana, lattuga, pomodoro, cipolle, patatine fritte, cheddar." data-es="Baguette, 3 hamburguesas de ternera, bacon al estilo americano, lechuga, tomate, cebolla, patatas fritas, cheddar.">Baguette, 3 steaks, bacon façon américain, salade, tomate, oignons, frites, cheddar.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="Traditional Hot Dog">Hot Dog Traditionnel</span><span class="mi-price">5,50€</span></div>
-            <p class="mi-desc" data-en="Bun, sausage, ketchup / American mustard.">Pain, saucisse, ketchup / moutarde américaine.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Traditional Hot Dog" data-it="Hot dog classico" data-es="Perrito caliente clásico">Hot Dog Traditionnel</span><span class="mi-price">5,50€</span></div>
+            <p class="mi-desc" data-en="Bun, sausage, ketchup / American mustard." data-it="Pane, würstel, ketchup / senape americana." data-es="Pan, salchicha, kétchup / mostaza americana.">Pain, saucisse, ketchup / moutarde américaine.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="Fried Hot Dog">Hot Dog Frit</span><span class="mi-price">8,00€ <em data-en="/ meal 11,00€">/ menu 11,00€</em></span></div>
-            <p class="mi-desc" data-en="Bun, fried sausage, cheddar, crispy onions, ketchup / American mustard.">Pain, saucisse frite, cheddar, oignons crispy, ketchup / moutarde américaine.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Fried Hot Dog" data-it="Hot dog fritto" data-es="Perrito caliente frito">Hot Dog Frit</span><span class="mi-price">8,00€ <em data-en="/ meal 11,00€" data-it="/ menu 11,00€" data-es="/ menú 11,00€">/ menu 11,00€</em></span></div>
+            <p class="mi-desc" data-en="Bun, fried sausage, cheddar, crispy onions, ketchup / American mustard." data-it="Pane, würstel fritto, cheddar, cipolle croccanti, ketchup / senape americana." data-es="Pan, salchicha frita, cheddar, cebolla crujiente, kétchup / mostaza americana.">Pain, saucisse frite, cheddar, oignons crispy, ketchup / moutarde américaine.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="Ham Panini">Panini Jambon</span><span class="mi-price">5,50€</span></div>
-            <p class="mi-desc" data-en="Panini bread, ham, cheese.">Pain panini, jambon, fromage.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Ham Panini" data-it="Panino al prosciutto" data-es="Panini de jamón">Panini Jambon</span><span class="mi-price">5,50€</span></div>
+            <p class="mi-desc" data-en="Panini bread, ham, cheese." data-it="Pane per panini, prosciutto, formaggio." data-es="Pan de panini, jamón, queso.">Pain panini, jambon, fromage.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="Chicken Panini">Panini Poulet</span><span class="mi-price">6,00€</span></div>
-            <p class="mi-desc" data-en="Panini bread, chicken, tomato, mozzarella.">Pain panini, poulet, tomate, mozzarella.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Chicken Panini" data-it="Panino al pollo" data-es="Panini de pollo">Panini Poulet</span><span class="mi-price">6,00€</span></div>
+            <p class="mi-desc" data-en="Panini bread, chicken, tomato, mozzarella." data-it="Pane per panini, pollo, pomodoro, mozzarella." data-es="Pan de panini, pollo, tomate, mozzarella.">Pain panini, poulet, tomate, mozzarella.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="4-Cheese Panini">Panini 4 Fromages</span><span class="mi-price">6,50€</span></div>
-            <p class="mi-desc" data-en="Panini bread, a blend of four melting cheeses.">Pain panini, mélange de quatre fromages fondants.</p>
+            <div class="mi-head"><span class="mi-name" data-en="4-Cheese Panini" data-it="Panino ai 4 formaggi" data-es="Panini de 4 quesos">Panini 4 Fromages</span><span class="mi-price">6,50€</span></div>
+            <p class="mi-desc" data-en="Panini bread, a blend of four melting cheeses." data-it="Pane per panini, quattro formaggi filanti." data-es="Pan de panini, mezcla de cuatro quesos fundidos.">Pain panini, mélange de quatre fromages fondants.</p>
           </li>
         </ul>
-        <p class="group-foot" data-en="Any extra: 1.00€ · Rösti: 0.50€">Tout supplément : 1,00€ · Rösti : 0,50€</p>
+        <p class="group-foot" data-en="Any extra: 1.00€ · Rösti: 0.50€" data-it="Ogni extra: 1,00€ · Rösti: 0,50€" data-es="Cada extra: 1,00€ · Rösti: 0,50€">Tout supplément : 1,00€ · Rösti : 0,50€</p>
       </section>
 
       <!-- BURGERS & WRAPS -->
       <section class="menu-group" data-cat="burgers">
-        <h3 class="group-title"><span class="gt-main"><span class="cat-ico" aria-hidden="true">🍔</span><span data-en="Burgers &amp; Wraps">Burgers &amp; Wraps</span></span> <span class="group-note" data-en="Meal: fries + drink">Menu : frites + boisson</span></h3>
+        <h3 class="group-title"><span class="gt-main"><span class="cat-ico" aria-hidden="true">🍔</span><span data-en="Burgers &amp; Wraps" data-it="Burger e wrap" data-es="Hamburguesas y wraps">Burgers &amp; Wraps</span></span> <span class="group-note" data-en="Meal: fries + drink" data-it="Menu: patatine + bibita" data-es="Menú: patatas + bebida">Menu : frites + boisson</span></h3>
         <ul class="menu-list">
           <li class="menu-item">
             <div class="mi-head"><span class="mi-name">Cheeseburger</span><span class="mi-price">4,50€</span></div>
-            <p class="mi-desc" data-en="Steak, cheddar, pickles, ketchup, mayonnaise.">Steak, cheddar, cornichons, ketchup, mayonnaise.</p>
+            <p class="mi-desc" data-en="Steak, cheddar, pickles, ketchup, mayonnaise." data-it="Hamburger di manzo, cheddar, cetriolini, ketchup, maionese." data-es="Hamburguesa de ternera, cheddar, pepinillos, kétchup, mayonesa.">Steak, cheddar, cornichons, ketchup, mayonnaise.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">Double Cheese</span><span class="mi-price">7,50€ <em data-en="/ meal 10,50€">/ menu 10,50€</em></span></div>
-            <p class="mi-desc" data-en="2 steaks, 2 cheddar, pickles, ketchup, mayonnaise.">2 steaks, 2 cheddar, cornichons, ketchup, mayonnaise.</p>
+            <div class="mi-head"><span class="mi-name">Double Cheese</span><span class="mi-price">7,50€ <em data-en="/ meal 10,50€" data-it="/ menu 10,50€" data-es="/ menú 10,50€">/ menu 10,50€</em></span></div>
+            <p class="mi-desc" data-en="2 steaks, 2 cheddar, pickles, ketchup, mayonnaise." data-it="2 hamburger di manzo, 2 fette di cheddar, cetriolini, ketchup, maionese." data-es="2 hamburguesas de ternera, 2 lonchas de cheddar, pepinillos, kétchup, mayonesa.">2 steaks, 2 cheddar, cornichons, ketchup, mayonnaise.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">Le Frenchie</span><span class="mi-price">12,90€ <em data-en="/ meal 15,90€">/ menu 15,90€</em></span></div>
-            <p class="mi-desc" data-en="100g steak, eggs, salad, tomato, red onions, raclette cheese, bacon, pepper or mustard sauce.">Steak 100g, œufs, salade, tomate, oignons rouges, fromage à raclette, bacon, sauce poivre ou sauce moutarde.</p>
+            <div class="mi-head"><span class="mi-name">Le Frenchie</span><span class="mi-price">12,90€ <em data-en="/ meal 15,90€" data-it="/ menu 15,90€" data-es="/ menú 15,90€">/ menu 15,90€</em></span></div>
+            <p class="mi-desc" data-en="100g steak, eggs, salad, tomato, red onions, raclette cheese, bacon, pepper or mustard sauce." data-it="Hamburger di manzo da 100 g, uova, lattuga, pomodoro, cipolle rosse, raclette, bacon, salsa al pepe o alla senape." data-es="Hamburguesa de ternera de 100 g, huevos, lechuga, tomate, cebolla roja, queso raclette, bacon, salsa de pimienta o mostaza.">Steak 100g, œufs, salade, tomate, oignons rouges, fromage à raclette, bacon, sauce poivre ou sauce moutarde.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">Le Raphaëlois</span><span class="mi-price">12,00€ <em data-en="/ meal 15,00€">/ menu 15,00€</em></span></div>
-            <p class="mi-desc" data-en="100g steak, salad, pickles, tomato, goat cheese, honey, candied onions.">Steak 100g, salade, cornichons, tomate, chèvre, miel, oignons confits.</p>
+            <div class="mi-head"><span class="mi-name">Le Raphaëlois</span><span class="mi-price">12,00€ <em data-en="/ meal 15,00€" data-it="/ menu 15,00€" data-es="/ menú 15,00€">/ menu 15,00€</em></span></div>
+            <p class="mi-desc" data-en="100g steak, salad, pickles, tomato, goat cheese, honey, candied onions." data-it="Hamburger di manzo da 100 g, lattuga, cetriolini, pomodoro, formaggio di capra, miele, cipolle confit." data-es="Hamburguesa de ternera de 100 g, lechuga, pepinillos, tomate, queso de cabra, miel, cebolla confitada.">Steak 100g, salade, cornichons, tomate, chèvre, miel, oignons confits.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">So Good 150</span><span class="mi-price">12,50€ <em data-en="/ meal 15,50€">/ menu 15,50€</em></span></div>
-            <p class="mi-desc" data-en="150g steak (butcher-style), salad, tomato, red onions, 2 cheddar, pickles, buffalo tasty sauce.">Steak 150g (façon bouchère), salade, tomate, oignons rouges, 2 cheddar, cornichons, sauce buffalo tasty.</p>
+            <div class="mi-head"><span class="mi-name">So Good 150</span><span class="mi-price">12,50€ <em data-en="/ meal 15,50€" data-it="/ menu 15,50€" data-es="/ menú 15,50€">/ menu 15,50€</em></span></div>
+            <p class="mi-desc" data-en="150g steak (butcher-style), salad, tomato, red onions, 2 cheddar, pickles, buffalo tasty sauce." data-it="Hamburger di manzo da 150 g del macellaio, lattuga, pomodoro, cipolle rosse, 2 fette di cheddar, cetriolini, salsa buffalo tasty." data-es="Hamburguesa de ternera de carnicería de 150 g, lechuga, tomate, cebolla roja, 2 lonchas de cheddar, pepinillos, salsa buffalo tasty.">Steak 150g (façon bouchère), salade, tomate, oignons rouges, 2 cheddar, cornichons, sauce buffalo tasty.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">So Good Bacon</span><span class="mi-price">13,50€ <em data-en="/ meal 16,50€">/ menu 16,50€</em></span></div>
-            <p class="mi-desc" data-en="3 × 80g steaks, grilled bacon, 3 cheddar, caramelised onions, barbecue sauce.">3 steaks 80g, bacon grillé, 3 cheddar, oignons caramélisés, sauce barbecue.</p>
+            <div class="mi-head"><span class="mi-name">So Good Bacon</span><span class="mi-price">13,50€ <em data-en="/ meal 16,50€" data-it="/ menu 16,50€" data-es="/ menú 16,50€">/ menu 16,50€</em></span></div>
+            <p class="mi-desc" data-en="3 × 80g steaks, grilled bacon, 3 cheddar, caramelised onions, barbecue sauce." data-it="3 hamburger di manzo da 80 g, bacon grigliato, 3 fette di cheddar, cipolle caramellate, salsa barbecue." data-es="3 hamburguesas de ternera de 80 g, bacon a la parrilla, 3 lonchas de cheddar, cebolla caramelizada, salsa barbacoa.">3 steaks 80g, bacon grillé, 3 cheddar, oignons caramélisés, sauce barbecue.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="The Master">Le Master</span><span class="mi-price">13,80€ <em data-en="/ meal 16,80€">/ menu 16,80€</em></span></div>
-            <p class="mi-desc" data-en="2 × 100g steaks, double cheddar, double raclette cheese, rösti, caramelised onions.">2 steaks 100g, double cheddar, double fromage à raclette, rösti, oignons caramélisés.</p>
+            <div class="mi-head"><span class="mi-name" data-en="The Master" data-it="Il Master" data-es="El Master">Le Master</span><span class="mi-price">13,80€ <em data-en="/ meal 16,80€" data-it="/ menu 16,80€" data-es="/ menú 16,80€">/ menu 16,80€</em></span></div>
+            <p class="mi-desc" data-en="2 × 100g steaks, double cheddar, double raclette cheese, rösti, caramelised onions." data-it="2 hamburger di manzo da 100 g, doppio cheddar, doppia raclette, rösti, cipolle caramellate." data-es="2 hamburguesas de ternera de 100 g, doble cheddar, doble queso raclette, rösti, cebolla caramelizada.">2 steaks 100g, double cheddar, double fromage à raclette, rösti, oignons caramélisés.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="The Hulk Burger">Le Hulk Burger</span><span class="mi-price">14,80€ <em data-en="/ meal 17,80€">/ menu 17,80€</em></span></div>
-            <p class="mi-desc" data-en="280g steak, salad, tomato, caramelised onions, house sauce.">Steak 280g, salade, tomate, oignons caramélisés, sauce maison.</p>
+            <div class="mi-head"><span class="mi-name" data-en="The Hulk Burger" data-it="Il Hulk Burger" data-es="La Hulk Burger">Le Hulk Burger</span><span class="mi-price">14,80€ <em data-en="/ meal 17,80€" data-it="/ menu 17,80€" data-es="/ menú 17,80€">/ menu 17,80€</em></span></div>
+            <p class="mi-desc" data-en="280g steak, salad, tomato, caramelised onions, house sauce." data-it="Hamburger di manzo da 280 g, lattuga, pomodoro, cipolle caramellate, salsa della casa." data-es="Hamburguesa de ternera de 280 g, lechuga, tomate, cebolla caramelizada, salsa de la casa.">Steak 280g, salade, tomate, oignons caramélisés, sauce maison.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">So Good Chicken Beef</span><span class="mi-price">12,50€ <em data-en="/ meal 15,50€">/ menu 15,50€</em></span></div>
-            <p class="mi-desc" data-en="Breaded chicken, 80g steak, salad, tomato, red onions, cheddar, emmental, barbecue or biggy sauce.">Poulet pané, steak 80g, salade, tomate, oignons rouges, cheddar, emmental, sauce barbecue ou biggy.</p>
+            <div class="mi-head"><span class="mi-name">So Good Chicken Beef</span><span class="mi-price">12,50€ <em data-en="/ meal 15,50€" data-it="/ menu 15,50€" data-es="/ menú 15,50€">/ menu 15,50€</em></span></div>
+            <p class="mi-desc" data-en="Breaded chicken, 80g steak, salad, tomato, red onions, cheddar, emmental, barbecue or biggy sauce." data-it="Pollo impanato, hamburger di manzo da 80 g, lattuga, pomodoro, cipolle rosse, cheddar, emmental, salsa barbecue o biggy." data-es="Pollo empanado, hamburguesa de ternera de 80 g, lechuga, tomate, cebolla roja, cheddar, emmental, salsa barbacoa o biggy.">Poulet pané, steak 80g, salade, tomate, oignons rouges, cheddar, emmental, sauce barbecue ou biggy.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">So Good Chicken</span><span class="mi-price">9,50€ <em data-en="/ meal 12,50€">/ menu 12,50€</em></span></div>
-            <p class="mi-desc" data-en="Breaded chicken, salad, tomato, red onions, sauce of your choice.">Poulet pané, salade, tomate, oignons rouges, sauce au choix.</p>
+            <div class="mi-head"><span class="mi-name">So Good Chicken</span><span class="mi-price">9,50€ <em data-en="/ meal 12,50€" data-it="/ menu 12,50€" data-es="/ menú 12,50€">/ menu 12,50€</em></span></div>
+            <p class="mi-desc" data-en="Breaded chicken, salad, tomato, red onions, sauce of your choice." data-it="Pollo impanato, lattuga, pomodoro, cipolle rosse, salsa a scelta." data-es="Pollo empanado, lechuga, tomate, cebolla roja, salsa a elegir.">Poulet pané, salade, tomate, oignons rouges, sauce au choix.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">So Good Fish</span><span class="mi-price">7,50€ <em data-en="/ meal 10,50€">/ menu 10,50€</em></span></div>
-            <p class="mi-desc" data-en="Breaded pollock, cheddar, salad, fish sauce.">Colin pané, cheddar, salade, sauce fish.</p>
+            <div class="mi-head"><span class="mi-name">So Good Fish</span><span class="mi-price">7,50€ <em data-en="/ meal 10,50€" data-it="/ menu 10,50€" data-es="/ menú 10,50€">/ menu 10,50€</em></span></div>
+            <p class="mi-desc" data-en="Breaded pollock, cheddar, salad, fish sauce." data-it="Merluzzo carbonaro impanato, cheddar, lattuga, salsa fish." data-es="Abadejo empanado, cheddar, lechuga, salsa fish.">Colin pané, cheddar, salade, sauce fish.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="The Veggie">Le Veggie</span><span class="mi-price">7,50€ <em data-en="/ meal 10,50€">/ menu 10,50€</em></span></div>
-            <p class="mi-desc" data-en="Rösti, cheddar, salad, tomato, caramelised onions, sauce of your choice.">Rösti, cheddar, salade, tomate, oignons caramélisés, sauce au choix.</p>
+            <div class="mi-head"><span class="mi-name" data-en="The Veggie" data-it="Il Veggie" data-es="La Veggie">Le Veggie</span><span class="mi-price">7,50€ <em data-en="/ meal 10,50€" data-it="/ menu 10,50€" data-es="/ menú 10,50€">/ menu 10,50€</em></span></div>
+            <p class="mi-desc" data-en="Rösti, cheddar, salad, tomato, caramelised onions, sauce of your choice." data-it="Rösti, cheddar, lattuga, pomodoro, cipolle caramellate, salsa a scelta." data-es="Rösti, cheddar, lechuga, tomate, cebolla caramelizada, salsa a elegir.">Rösti, cheddar, salade, tomate, oignons caramélisés, sauce au choix.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="American Wrap">Wrap Américain</span><span class="mi-price">13,80€ <em data-en="/ meal 16,80€">/ menu 16,80€</em></span></div>
-            <p class="mi-desc" data-en="Breaded chicken, cheddar, salad, tomato, fried onions, bacon, biggy sauce.">Poulet pané, cheddar, salade, tomate, oignons frits, bacon, sauce biggy.</p>
+            <div class="mi-head"><span class="mi-name" data-en="American Wrap" data-it="Wrap americano" data-es="Wrap americano">Wrap Américain</span><span class="mi-price">13,80€ <em data-en="/ meal 16,80€" data-it="/ menu 16,80€" data-es="/ menú 16,80€">/ menu 16,80€</em></span></div>
+            <p class="mi-desc" data-en="Breaded chicken, cheddar, salad, tomato, fried onions, bacon, biggy sauce." data-it="Pollo impanato, cheddar, lattuga, pomodoro, cipolle fritte, bacon, salsa biggy." data-es="Pollo empanado, cheddar, lechuga, tomate, cebolla frita, bacon, salsa biggy.">Poulet pané, cheddar, salade, tomate, oignons frits, bacon, sauce biggy.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="Goat Cheese Wrap">Wrap Chèvre</span><span class="mi-price">7,50€ <em data-en="/ meal 10,50€">/ menu 10,50€</em></span></div>
-            <p class="mi-desc" data-en="Breaded chicken, cheddar, goat cheese, salad, tomato, onions, white or honey-mustard sauce.">Poulet pané, cheddar, chèvre, salade, tomate, oignons, sauce blanche ou moutarde miel.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Goat Cheese Wrap" data-it="Wrap al caprino" data-es="Wrap de queso de cabra">Wrap Chèvre</span><span class="mi-price">7,50€ <em data-en="/ meal 10,50€" data-it="/ menu 10,50€" data-es="/ menú 10,50€">/ menu 10,50€</em></span></div>
+            <p class="mi-desc" data-en="Breaded chicken, cheddar, goat cheese, salad, tomato, onions, white or honey-mustard sauce." data-it="Pollo impanato, cheddar, formaggio di capra, lattuga, pomodoro, cipolle, salsa bianca o senape e miele." data-es="Pollo empanado, cheddar, queso de cabra, lechuga, tomate, cebolla, salsa blanca o de mostaza y miel.">Poulet pané, cheddar, chèvre, salade, tomate, oignons, sauce blanche ou moutarde miel.</p>
           </li>
         </ul>
-        <p class="group-foot" data-en="Any extra: 1.00€ (egg, bacon, cheddar, peppers…) · Rösti: 0.50€">Tout supplément : 1,00€ (œuf, bacon, cheddar, poivrons…) · Rösti : 0,50€</p>
+        <p class="group-foot" data-en="Any extra: 1.00€ (egg, bacon, cheddar, peppers…) · Rösti: 0.50€" data-it="Ogni extra: 1,00€ (uovo, bacon, cheddar, peperoni…) · Rösti: 0,50€" data-es="Cada extra: 1,00€ (huevo, bacon, cheddar, pimientos…) · Rösti: 0,50€">Tout supplément : 1,00€ (œuf, bacon, cheddar, poivrons…) · Rösti : 0,50€</p>
       </section>
 
       <!-- KUMPIR -->
       <section class="menu-group" data-cat="kumpir">
-        <h3 class="group-title"><span class="gt-main"><span class="cat-ico" aria-hidden="true">🥔</span><span>Kumpir</span></span> <span class="group-note" data-en="4 toppings of your choice: corn · green olives · black olives · peppers in oil · red cabbage">4 garnitures au choix : maïs · olives vertes · olives noires · poivrons à l'huile · chou rouge</span></h3>
+        <h3 class="group-title"><span class="gt-main"><span class="cat-ico" aria-hidden="true">🥔</span><span>Kumpir</span></span> <span class="group-note" data-en="4 toppings of your choice: corn · green olives · black olives · peppers in oil · red cabbage" data-it="4 guarnizioni a scelta: mais · olive verdi · olive nere · peperoni sott&#x27;olio · cavolo rosso" data-es="4 ingredientes a elegir: maíz · aceitunas verdes · aceitunas negras · pimientos en aceite · col lombarda">4 garnitures au choix : maïs · olives vertes · olives noires · poivrons à l'huile · chou rouge</span></h3>
         <ul class="menu-list">
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">Kumpir Kebab</span><span class="mi-price">10,50€ <em data-en="/ meal 12,00€">/ menu 12,00€</em></span></div>
-            <p class="mi-desc" data-en="Baked potato, butter, grated cheese, kebab, sliced fresh mushrooms, caramelised onions, sauce of your choice.">Pomme de terre au four, beurre, fromage râpé, kebab, champignons frais émincés, oignons caramélisés, sauce au choix.</p>
+            <div class="mi-head"><span class="mi-name">Kumpir Kebab</span><span class="mi-price">10,50€ <em data-en="/ meal 12,00€" data-it="/ menu 12,00€" data-es="/ menú 12,00€">/ menu 12,00€</em></span></div>
+            <p class="mi-desc" data-en="Baked potato, butter, grated cheese, kebab, sliced fresh mushrooms, caramelised onions, sauce of your choice." data-it="Patata al forno, burro, formaggio grattugiato, kebab, funghi freschi a fettine, cipolle caramellate, salsa a scelta." data-es="Patata al horno, mantequilla, queso rallado, kebab, champiñones frescos laminados, cebolla caramelizada, salsa a elegir.">Pomme de terre au four, beurre, fromage râpé, kebab, champignons frais émincés, oignons caramélisés, sauce au choix.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">Kumpir Cannibal</span><span class="mi-price">14,50€ <em data-en="/ meal 16,00€">/ menu 16,00€</em></span></div>
-            <p class="mi-desc" data-en="Baked potato, butter, grated cheese, ground beef, cheddar, onions, barbecue sauce.">Pomme de terre au four, beurre, fromage râpé, steak haché, cheddar, oignons, sauce barbecue.</p>
+            <div class="mi-head"><span class="mi-name">Kumpir Cannibal</span><span class="mi-price">14,50€ <em data-en="/ meal 16,00€" data-it="/ menu 16,00€" data-es="/ menú 16,00€">/ menu 16,00€</em></span></div>
+            <p class="mi-desc" data-en="Baked potato, butter, grated cheese, ground beef, cheddar, onions, barbecue sauce." data-it="Patata al forno, burro, formaggio grattugiato, carne di manzo macinata, cheddar, cipolle, salsa barbecue." data-es="Patata al horno, mantequilla, queso rallado, carne picada de ternera, cheddar, cebolla, salsa barbacoa.">Pomme de terre au four, beurre, fromage râpé, steak haché, cheddar, oignons, sauce barbecue.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">Kumpir Curry</span><span class="mi-price">11,00€ <em data-en="/ meal 12,50€">/ menu 12,50€</em></span></div>
-            <p class="mi-desc" data-en="Baked potato, butter, grated cheese, chicken, curry sauce, onions, cheese.">Pomme de terre au four, beurre, fromage râpé, poulet, sauce curry, oignons, fromage.</p>
+            <div class="mi-head"><span class="mi-name">Kumpir Curry</span><span class="mi-price">11,00€ <em data-en="/ meal 12,50€" data-it="/ menu 12,50€" data-es="/ menú 12,50€">/ menu 12,50€</em></span></div>
+            <p class="mi-desc" data-en="Baked potato, butter, grated cheese, chicken, curry sauce, onions, cheese." data-it="Patata al forno, burro, formaggio grattugiato, pollo, salsa curry, cipolle, formaggio." data-es="Patata al horno, mantequilla, queso rallado, pollo, salsa de curry, cebolla, queso.">Pomme de terre au four, beurre, fromage râpé, poulet, sauce curry, oignons, fromage.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">Kumpir Savoyard</span><span class="mi-price">13,50€ <em data-en="/ meal 15,00€">/ menu 15,00€</em></span></div>
-            <p class="mi-desc" data-en="Baked potato, butter, grated cheese, bacon bits, raclette cheese, cream.">Pomme de terre au four, beurre, fromage râpé, lardons, fromage à raclette, crème.</p>
+            <div class="mi-head"><span class="mi-name">Kumpir Savoyard</span><span class="mi-price">13,50€ <em data-en="/ meal 15,00€" data-it="/ menu 15,00€" data-es="/ menú 15,00€">/ menu 15,00€</em></span></div>
+            <p class="mi-desc" data-en="Baked potato, butter, grated cheese, bacon bits, raclette cheese, cream." data-it="Patata al forno, burro, formaggio grattugiato, pancetta a cubetti, raclette, panna." data-es="Patata al horno, mantequilla, queso rallado, bacon en dados, queso raclette, nata.">Pomme de terre au four, beurre, fromage râpé, lardons, fromage à raclette, crème.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="Masala Chicken Kumpir">Kumpir Poulet Masala</span><span class="mi-price">11,90€ <em data-en="/ meal 13,40€">/ menu 13,40€</em></span></div>
-            <p class="mi-desc" data-en="Baked potato, butter, grated cheese, masala chicken, onions, masala sauce.">Pomme de terre au four, beurre, fromage râpé, poulet masala, oignons, sauce masala.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Masala Chicken Kumpir" data-it="Kumpir al pollo masala" data-es="Kumpir de pollo masala">Kumpir Poulet Masala</span><span class="mi-price">11,90€ <em data-en="/ meal 13,40€" data-it="/ menu 13,40€" data-es="/ menú 13,40€">/ menu 13,40€</em></span></div>
+            <p class="mi-desc" data-en="Baked potato, butter, grated cheese, masala chicken, onions, masala sauce." data-it="Patata al forno, burro, formaggio grattugiato, pollo masala, cipolle, salsa masala." data-es="Patata al horno, mantequilla, queso rallado, pollo masala, cebolla, salsa masala.">Pomme de terre au four, beurre, fromage râpé, poulet masala, oignons, sauce masala.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">Kumpir Barbecue</span><span class="mi-price">11,40€ <em data-en="/ meal 12,90€">/ menu 12,90€</em></span></div>
-            <p class="mi-desc" data-en="Baked potato, butter, grated cheese, chicken or beef, barbecue sauce, onions, cheddar.">Pomme de terre au four, beurre, fromage râpé, poulet ou bœuf, sauce barbecue, oignons, cheddar.</p>
+            <div class="mi-head"><span class="mi-name">Kumpir Barbecue</span><span class="mi-price">11,40€ <em data-en="/ meal 12,90€" data-it="/ menu 12,90€" data-es="/ menú 12,90€">/ menu 12,90€</em></span></div>
+            <p class="mi-desc" data-en="Baked potato, butter, grated cheese, chicken or beef, barbecue sauce, onions, cheddar." data-it="Patata al forno, burro, formaggio grattugiato, pollo o manzo, salsa barbecue, cipolle, cheddar." data-es="Patata al horno, mantequilla, queso rallado, pollo o ternera, salsa barbacoa, cebolla, cheddar.">Pomme de terre au four, beurre, fromage râpé, poulet ou bœuf, sauce barbecue, oignons, cheddar.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">Kumpir Roquefort</span><span class="mi-price">13,90€ <em data-en="/ meal 15,40€">/ menu 15,40€</em></span></div>
-            <p class="mi-desc" data-en="Baked potato, butter, grated cheese, roquefort, bavette steak, onions, cream.">Pomme de terre au four, beurre, fromage râpé, roquefort, bavette, oignons, crème.</p>
+            <div class="mi-head"><span class="mi-name">Kumpir Roquefort</span><span class="mi-price">13,90€ <em data-en="/ meal 15,40€" data-it="/ menu 15,40€" data-es="/ menú 15,40€">/ menu 15,40€</em></span></div>
+            <p class="mi-desc" data-en="Baked potato, butter, grated cheese, roquefort, bavette steak, onions, cream." data-it="Patata al forno, burro, formaggio grattugiato, roquefort, bavetta di manzo, cipolle, panna." data-es="Patata al horno, mantequilla, queso rallado, roquefort, filete de falda de ternera, cebolla, nata.">Pomme de terre au four, beurre, fromage râpé, roquefort, bavette, oignons, crème.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="Vegetarian Kumpir">Kumpir Végétarien</span><span class="mi-price">10,00€ <em data-en="/ meal 11,50€">/ menu 11,50€</em></span></div>
-            <p class="mi-desc" data-en="Baked potato, butter, grated cheese, mushrooms, corn, tomato, onions.">Pomme de terre au four, beurre, fromage râpé, champignons, maïs, tomate, oignons.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Vegetarian Kumpir" data-it="Kumpir vegetariano" data-es="Kumpir vegetariano">Kumpir Végétarien</span><span class="mi-price">10,00€ <em data-en="/ meal 11,50€" data-it="/ menu 11,50€" data-es="/ menú 11,50€">/ menu 11,50€</em></span></div>
+            <p class="mi-desc" data-en="Baked potato, butter, grated cheese, mushrooms, corn, tomato, onions." data-it="Patata al forno, burro, formaggio grattugiato, funghi, mais, pomodoro, cipolle." data-es="Patata al horno, mantequilla, queso rallado, champiñones, maíz, tomate, cebolla.">Pomme de terre au four, beurre, fromage râpé, champignons, maïs, tomate, oignons.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">Kumpir Philly Cheese Steak</span><span class="mi-price">13,50€ <em data-en="/ meal 15,00€">/ menu 15,00€</em></span></div>
-            <p class="mi-desc" data-en="Baked potato, butter, grated cheese, beef, cheddar, onions, cheese sauce.">Pomme de terre au four, beurre, fromage râpé, bœuf, cheddar, oignons, sauce fromagère.</p>
+            <div class="mi-head"><span class="mi-name">Kumpir Philly Cheese Steak</span><span class="mi-price">13,50€ <em data-en="/ meal 15,00€" data-it="/ menu 15,00€" data-es="/ menú 15,00€">/ menu 15,00€</em></span></div>
+            <p class="mi-desc" data-en="Baked potato, butter, grated cheese, beef, cheddar, onions, cheese sauce." data-it="Patata al forno, burro, formaggio grattugiato, manzo, cheddar, cipolle, salsa al formaggio." data-es="Patata al horno, mantequilla, queso rallado, ternera, cheddar, cebolla, salsa de queso.">Pomme de terre au four, beurre, fromage râpé, bœuf, cheddar, oignons, sauce fromagère.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">Kumpir Saumon</span><span class="mi-price">14,00€ <em data-en="/ meal 15,50€">/ menu 15,50€</em></span></div>
-            <p class="mi-desc" data-en="Baked potato, butter, cream cheese, salmon, crème fraîche, onions.">Pomme de terre au four, beurre, fromage frais, saumon, crème fraîche, oignons.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Salmon Kumpir" data-it="Kumpir al salmone" data-es="Kumpir de salmón">Kumpir Saumon</span><span class="mi-price">14,00€ <em data-en="/ meal 15,50€" data-it="/ menu 15,50€" data-es="/ menú 15,50€">/ menu 15,50€</em></span></div>
+            <p class="mi-desc" data-en="Baked potato, butter, cream cheese, salmon, crème fraîche, onions." data-it="Patata al forno, burro, formaggio fresco, salmone, crème fraîche, cipolle." data-es="Patata al horno, mantequilla, queso crema, salmón, crème fraîche, cebolla.">Pomme de terre au four, beurre, fromage frais, saumon, crème fraîche, oignons.</p>
           </li>
         </ul>
-        <p class="group-foot" data-en="Extra: egg / cheddar 1.00€">Supplément : œuf / cheddar 1,00€</p>
+        <p class="group-foot" data-en="Extra: egg / cheddar 1.00€" data-it="Extra: uovo / cheddar 1,00€" data-es="Extra: huevo / cheddar 1,00€">Supplément : œuf / cheddar 1,00€</p>
       </section>
 
       <!-- BOXS -->
       <section class="menu-group" data-cat="boxs">
-        <h3 class="group-title"><span class="gt-main"><span class="cat-ico" aria-hidden="true">📦</span><span data-en="Boxes">Boxs</span></span></h3>
+        <h3 class="group-title"><span class="gt-main"><span class="cat-ico" aria-hidden="true">📦</span><span data-en="Boxes" data-it="Box" data-es="Boxes">Boxs</span></span></h3>
         <ul class="menu-list">
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">Box Beef</span><span class="mi-price">15,50€ <em data-en="/ meal 16,50€">/ menu 16,50€</em></span></div>
-            <p class="mi-desc" data-en="Burger halved, served with a generous melting cheddar sauce, fries and a bottle of water.">Burger coupé en deux, servi avec une généreuse sauce cheddar fondante, accompagné de frites et d'une bouteille d'eau.</p>
+            <div class="mi-head"><span class="mi-name">Box Beef</span><span class="mi-price">15,50€ <em data-en="/ meal 16,50€" data-it="/ menu 16,50€" data-es="/ menú 16,50€">/ menu 16,50€</em></span></div>
+            <p class="mi-desc" data-en="Burger halved, served with a generous melting cheddar sauce, fries and a bottle of water." data-it="Burger tagliato a metà, con abbondante salsa cheddar filante, patatine fritte e una bottiglia d&#x27;acqua." data-es="Hamburguesa cortada por la mitad, con abundante salsa de cheddar fundido, patatas fritas y una botella de agua.">Burger coupé en deux, servi avec une généreuse sauce cheddar fondante, accompagné de frites et d'une bouteille d'eau.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">Box Chicken Beef</span><span class="mi-price">16,90€ <em data-en="/ meal 17,90€">/ menu 17,90€</em></span></div>
-            <p class="mi-desc" data-en="Chicken &amp; beef burger halved, with fries, a sauce of your choice and a bottle of water.">Burger chicken &amp; beef coupé en deux, accompagné de frites, d'une sauce au choix et d'une bouteille d'eau.</p>
+            <div class="mi-head"><span class="mi-name">Box Chicken Beef</span><span class="mi-price">16,90€ <em data-en="/ meal 17,90€" data-it="/ menu 17,90€" data-es="/ menú 17,90€">/ menu 17,90€</em></span></div>
+            <p class="mi-desc" data-en="Chicken &amp; beef burger halved, with fries, a sauce of your choice and a bottle of water." data-it="Burger di pollo e manzo tagliato a metà, con patatine fritte, salsa a scelta e una bottiglia d&#x27;acqua." data-es="Hamburguesa de pollo y ternera cortada por la mitad, con patatas fritas, salsa a elegir y una botella de agua.">Burger chicken &amp; beef coupé en deux, accompagné de frites, d'une sauce au choix et d'une bouteille d'eau.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="Chicken Box">Box Chicken</span><span class="mi-price">18,90€ <em data-en="/ meal 19,90€">/ menu 19,90€</em></span></div>
-            <p class="mi-desc" data-en="2 tenders, 3 wings, 6 popcorn chicken, 1 So Good Chicken and a bottle of water.">2 tenders, 3 wings, 6 popcorn poulet, 1 So Good Chicken et une bouteille d'eau.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Chicken Box" data-it="Box pollo" data-es="Box de pollo">Box Chicken</span><span class="mi-price">18,90€ <em data-en="/ meal 19,90€" data-it="/ menu 19,90€" data-es="/ menú 19,90€">/ menu 19,90€</em></span></div>
+            <p class="mi-desc" data-en="2 tenders, 3 wings, 6 popcorn chicken, 1 So Good Chicken and a bottle of water." data-it="2 filetti di pollo impanati, 3 alette, 6 bocconcini di pollo, 1 So Good Chicken e una bottiglia d&#x27;acqua." data-es="2 tiras de pollo empanado, 3 alitas, 6 bocaditos de pollo, 1 So Good Chicken y una botella de agua.">2 tenders, 3 wings, 6 popcorn poulet, 1 So Good Chicken et une bouteille d'eau.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="Truffle Box">Box Truffe</span><span class="mi-price">22,90€ <em data-en="/ meal 23,90€">/ menu 23,90€</em></span></div>
-            <p class="mi-desc" data-en="2 Double Cheese truffle sauce, 2 tenders, 6 onion rings, 6 chili cheese, fries and a bottle of water.">2 Double Cheese sauce truffe, 2 tenders, 6 onion rings, 6 chili cheese, frites et une bouteille d'eau.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Truffle Box" data-it="Box tartufo" data-es="Box de trufa">Box Truffe</span><span class="mi-price">22,90€ <em data-en="/ meal 23,90€" data-it="/ menu 23,90€" data-es="/ menú 23,90€">/ menu 23,90€</em></span></div>
+            <p class="mi-desc" data-en="2 Double Cheese truffle sauce, 2 tenders, 6 onion rings, 6 chili cheese, fries and a bottle of water." data-it="2 Double Cheese con salsa al tartufo, 2 filetti di pollo impanati, 6 anelli di cipolla, 6 chili cheese, patatine fritte e una bottiglia d&#x27;acqua." data-es="2 Double Cheese con salsa de trufa, 2 tiras de pollo empanado, 6 aros de cebolla, 6 chili cheese, patatas fritas y una botella de agua.">2 Double Cheese sauce truffe, 2 tenders, 6 onion rings, 6 chili cheese, frites et une bouteille d'eau.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="Family Box">Box Famille</span><span class="mi-price">36,90€</span></div>
-            <p class="mi-desc" data-en="Sharing platter: 2 chicken burgers, or 2 Double Cheese, or 2 Cheeseburgers, with cheddar fries or crispy onions, and a 1.5L Coca-Cola or Oasis.">Assortiment à partager : 2 burgers chicken, ou 2 Double Cheese, ou 2 Cheeseburgers, accompagné de frites cheddar ou d'oignons crispy, et de 1,5 L de Coca-Cola ou Oasis.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Family Box" data-it="Box famiglia" data-es="Box familiar">Box Famille</span><span class="mi-price">36,90€</span></div>
+            <p class="mi-desc" data-en="Sharing platter: 2 chicken burgers, or 2 Double Cheese, or 2 Cheeseburgers, with cheddar fries or crispy onions, and a 1.5L Coca-Cola or Oasis." data-it="Da condividere: 2 burger di pollo, oppure 2 Double Cheese, oppure 2 Cheeseburger, con patatine al cheddar o cipolle croccanti e 1,5 L di Coca-Cola o Oasis." data-es="Para compartir: 2 hamburguesas de pollo, o 2 Double Cheese, o 2 Cheeseburgers, con patatas con cheddar o cebolla crujiente y 1,5 L de Coca-Cola u Oasis.">Assortiment à partager : 2 burgers chicken, ou 2 Double Cheese, ou 2 Cheeseburgers, accompagné de frites cheddar ou d'oignons crispy, et de 1,5 L de Coca-Cola ou Oasis.</p>
           </li>
         </ul>
-        <p class="group-foot" data-en="Extra drink: 1.00€">Boisson supplémentaire : 1,00€</p>
+        <p class="group-foot" data-en="Extra drink: 1.00€" data-it="Bibita extra: 1,00€" data-es="Bebida extra: 1,00€">Boisson supplémentaire : 1,00€</p>
       </section>
 
       <!-- SNACKING -->
       <section class="menu-group" data-cat="snacking">
-        <h3 class="group-title"><span class="gt-main"><span class="cat-ico" aria-hidden="true">🍗</span><span>Snacking</span></span></h3>
+        <h3 class="group-title"><span class="gt-main"><span class="cat-ico" aria-hidden="true">🍗</span><span data-en="Snacking" data-it="Spuntini" data-es="Aperitivos">Snacking</span></span></h3>
         <ul class="menu-list">
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">Nuggets</span><span class="mi-price" data-en="5 pcs 4,00€">5 pièces 4,00€</span></div>
-            <p class="mi-desc" data-en="Small breaded chicken pieces, golden and crispy.">Petits morceaux de poulet panés, dorés et croustillants.</p>
+            <div class="mi-head"><span class="mi-name">Nuggets</span><span class="mi-price" data-en="5 pcs 4,00€" data-it="5 pezzi 4,00€" data-es="5 unidades 4,00€">5 pièces 4,00€</span></div>
+            <p class="mi-desc" data-en="Small breaded chicken pieces, golden and crispy." data-it="Bocconcini di pollo impanati, dorati e croccanti." data-es="Pequeños trozos de pollo empanado, dorados y crujientes.">Petits morceaux de poulet panés, dorés et croustillants.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">Mozza Sticks</span><span class="mi-price" data-en="5 pcs 4,00€">5 pièces 4,00€</span></div>
-            <p class="mi-desc" data-en="Melting mozzarella sticks in a crispy coating.">Bâtonnets de mozzarella fondante, enrobés d'une panure croustillante.</p>
+            <div class="mi-head"><span class="mi-name">Mozza Sticks</span><span class="mi-price" data-en="5 pcs 4,00€" data-it="5 pezzi 4,00€" data-es="5 unidades 4,00€">5 pièces 4,00€</span></div>
+            <p class="mi-desc" data-en="Melting mozzarella sticks in a crispy coating." data-it="Bastoncini di mozzarella filante con panatura croccante." data-es="Palitos de mozzarella fundida con rebozado crujiente.">Bâtonnets de mozzarella fondante, enrobés d'une panure croustillante.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="Homemade Tenders">Tenders Faits Maison</span><span class="mi-price" data-en="4 pcs 5,50€">4 pièces 5,50€</span></div>
-            <p class="mi-desc" data-en="Chicken tenders in a crispy coating.">Filets de poulet tenders, panure croustillante.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Homemade Tenders" data-it="Filetti di pollo fatti in casa" data-es="Tiras de pollo caseras">Tenders Faits Maison</span><span class="mi-price" data-en="4 pcs 5,50€" data-it="4 pezzi 5,50€" data-es="4 unidades 5,50€">4 pièces 5,50€</span></div>
+            <p class="mi-desc" data-en="Chicken tenders in a crispy coating." data-it="Filetti di pollo con panatura croccante." data-es="Tiras de pollo con rebozado crujiente.">Filets de poulet tenders, panure croustillante.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">Wings</span><span class="mi-price" data-en="4 pcs 6,00€">4 pièces 6,00€</span></div>
-            <p class="mi-desc" data-en="Marinated chicken wings, crispy and full of flavour.">Ailes de poulet marinées, croustillantes et pleines de saveur.</p>
+            <div class="mi-head"><span class="mi-name">Wings</span><span class="mi-price" data-en="4 pcs 6,00€" data-it="4 pezzi 6,00€" data-es="4 unidades 6,00€">4 pièces 6,00€</span></div>
+            <p class="mi-desc" data-en="Marinated chicken wings, crispy and full of flavour." data-it="Alette di pollo marinate, croccanti e ricche di sapore." data-es="Alitas de pollo marinadas, crujientes y llenas de sabor.">Ailes de poulet marinées, croustillantes et pleines de saveur.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name">Bucket 2×5</span><span class="mi-price" data-en="meal 16,50€">menu 16,50€</span></div>
-            <p class="mi-desc" data-en="5 tenders, 5 wings (spicy or not), served with 2 fries and 2 drinks.">5 tenders, 5 wings (épicé ou non), servi avec 2 frites et 2 boissons.</p>
+            <div class="mi-head"><span class="mi-name">Bucket 2×5</span><span class="mi-price" data-en="meal 16,50€" data-it="menu 16,50€" data-es="menú 16,50€">menu 16,50€</span></div>
+            <p class="mi-desc" data-en="5 tenders, 5 wings (spicy or not), served with 2 fries and 2 drinks." data-it="5 filetti di pollo impanati, 5 alette (piccanti o no), con 2 porzioni di patatine e 2 bibite." data-es="5 tiras de pollo empanado, 5 alitas (picantes o no), con 2 raciones de patatas fritas y 2 bebidas.">5 tenders, 5 wings (épicé ou non), servi avec 2 frites et 2 boissons.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="Fries">Frites</span><span class="mi-price">2,50€</span></div>
-            <p class="mi-desc" data-en="Golden, crispy fries — the perfect side.">Frites dorées, croustillantes à souhait, l'accompagnement parfait.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Fries" data-it="Patatine fritte" data-es="Patatas fritas">Frites</span><span class="mi-price">2,50€</span></div>
+            <p class="mi-desc" data-en="Golden, crispy fries — the perfect side." data-it="Patatine dorate e croccanti — il contorno perfetto." data-es="Patatas fritas doradas y crujientes — la guarnición perfecta.">Frites dorées, croustillantes à souhait, l'accompagnement parfait.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="Cheddar Bacon Fries">Frites Cheddar Bacon</span><span class="mi-price">4,50€</span></div>
-            <p class="mi-desc" data-en="Crispy fries topped with melting cheddar and grilled bacon bits.">Frites croustillantes nappées de cheddar fondant et de morceaux de bacon grillé.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Cheddar Bacon Fries" data-it="Patatine cheddar e bacon" data-es="Patatas con cheddar y bacon">Frites Cheddar Bacon</span><span class="mi-price">4,50€</span></div>
+            <p class="mi-desc" data-en="Crispy fries topped with melting cheddar and grilled bacon bits." data-it="Patatine croccanti con cheddar filante e pezzetti di bacon grigliato." data-es="Patatas fritas crujientes con cheddar fundido y trocitos de bacon a la parrilla.">Frites croustillantes nappées de cheddar fondant et de morceaux de bacon grillé.</p>
           </li>
         </ul>
-        <p class="group-foot" data-en="Fries — extra cheddar: 1.00€">Frites — supplément cheddar : 1,00€</p>
+        <p class="group-foot" data-en="Fries — extra cheddar: 1.00€" data-it="Patatine — extra cheddar: 1,00€" data-es="Patatas — extra cheddar: 1,00€">Frites — supplément cheddar : 1,00€</p>
       </section>
 
       <!-- MENUS -->
       <section class="menu-group" data-cat="menus">
-        <h3 class="group-title"><span class="gt-main"><span class="cat-ico" aria-hidden="true">🍟</span><span data-en="Meals">Menus</span></span></h3>
+        <h3 class="group-title"><span class="gt-main"><span class="cat-ico" aria-hidden="true">🍟</span><span data-en="Meals" data-it="Menu completi" data-es="Menús">Menus</span></span></h3>
         <ul class="menu-list">
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="Student Meal">Menu Étudiant</span><span class="mi-price">9,00€</span></div>
-            <p class="mi-desc" data-en="80g steak or fish, salad, tomato, red onions, cheddar, ketchup, mayonnaise. Weekdays only, excl. weekends &amp; public holidays.">Steak 80g ou fish, salade, tomate, oignons rouges, cheddar, sauce ketchup, mayonnaise. En semaine, hors week-end et jours fériés.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Student Meal" data-it="Menu studente" data-es="Menú estudiante">Menu Étudiant</span><span class="mi-price">9,00€</span></div>
+            <p class="mi-desc" data-en="80g steak or fish, salad, tomato, red onions, cheddar, ketchup, mayonnaise. Weekdays only, excl. weekends &amp; public holidays." data-it="Hamburger di manzo da 80 g o pesce, lattuga, pomodoro, cipolle rosse, cheddar, ketchup, maionese. Solo nei giorni feriali, esclusi weekend e festivi." data-es="Hamburguesa de ternera de 80 g o pescado, lechuga, tomate, cebolla roja, cheddar, kétchup, mayonesa. Solo entre semana, excepto fines de semana y festivos.">Steak 80g ou fish, salade, tomate, oignons rouges, cheddar, sauce ketchup, mayonnaise. En semaine, hors week-end et jours fériés.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="Kids' Meal">Menu Enfant</span><span class="mi-price">7,00€</span></div>
-            <p class="mi-desc" data-en="5 nuggets or 1 cheeseburger, Capri-Sun, fries, apple sauce. Up to 11 years.">5 nuggets ou 1 cheeseburger, Capri-Sun, frites, compote. Jusqu'à 11 ans.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Kids' Meal" data-it="Menu bambino" data-es="Menú infantil">Menu Enfant</span><span class="mi-price">7,00€</span></div>
+            <p class="mi-desc" data-en="5 nuggets or 1 cheeseburger, Capri-Sun, fries, apple sauce. Up to 11 years." data-it="5 nuggets o 1 cheeseburger, Capri-Sun, patatine fritte, composta di mele. Fino a 11 anni." data-es="5 nuggets o 1 cheeseburger, Capri-Sun, patatas fritas, compota de manzana. Hasta 11 años.">5 nuggets ou 1 cheeseburger, Capri-Sun, frites, compote. Jusqu'à 11 ans.</p>
           </li>
         </ul>
       </section>
 
       <!-- DESSERTS -->
       <section class="menu-group" data-cat="desserts">
-        <h3 class="group-title"><span class="gt-main"><span class="cat-ico" aria-hidden="true">🍰</span><span>Desserts</span></span></h3>
+        <h3 class="group-title"><span class="gt-main"><span class="cat-ico" aria-hidden="true">🍰</span><span data-en="Desserts" data-it="Dolci" data-es="Postres">Desserts</span></span></h3>
         <ul class="menu-list">
           <li class="menu-item">
             <div class="mi-head"><span class="mi-name">Tiramisu</span><span class="mi-price">4,00€</span></div>
-            <p class="mi-desc" data-en="Flavours of the season: Oreo, Speculoos, caramel, Kinder.">Parfums selon la saison : Oreo, Spéculoos, caramel, Kinder.</p>
+            <p class="mi-desc" data-en="Flavours of the season: Oreo, Speculoos, caramel, Kinder." data-it="Gusti secondo la stagione: Oreo, Speculoos, caramello, Kinder." data-es="Sabores según la temporada: Oreo, Speculoos, caramelo, Kinder.">Parfums selon la saison : Oreo, Spéculoos, caramel, Kinder.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="Dubai Chocolate Tiramisu">Tiramisu Chocolat de Dubaï</span><span class="mi-price">4,80€</span></div>
-            <p class="mi-desc" data-en="Chocolate, pistachio, kadaïf.">Chocolat, pistache, kadaïf.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Dubai Chocolate Tiramisu" data-it="Tiramisù al cioccolato di Dubai" data-es="Tiramisú de chocolate de Dubái">Tiramisu Chocolat de Dubaï</span><span class="mi-price">4,80€</span></div>
+            <p class="mi-desc" data-en="Chocolate, pistachio, kadaïf." data-it="Cioccolato, pistacchio, kataifi." data-es="Chocolate, pistacho, kadaif.">Chocolat, pistache, kadaïf.</p>
           </li>
           <li class="menu-item">
             <div class="mi-head"><span class="mi-name">Donuts</span><span class="mi-price">3,00€</span></div>
-            <p class="mi-desc" data-en="Chocolate.">Chocolat.</p>
+            <p class="mi-desc" data-en="Chocolate." data-it="Cioccolato." data-es="Chocolate.">Chocolat.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="Daim Tart">Tarte au Daim</span><span class="mi-price">3,00€</span></div>
-            <p class="mi-desc" data-en="Subject to availability.">Selon disponibilité.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Daim Tart" data-it="Torta al Daim" data-es="Tarta de Daim">Tarte au Daim</span><span class="mi-price">3,00€</span></div>
+            <p class="mi-desc" data-en="Subject to availability." data-it="Secondo disponibilità." data-es="Según disponibilidad.">Selon disponibilité.</p>
           </li>
           <li class="menu-item">
-            <div class="mi-head"><span class="mi-name" data-en="Pastry of the Day">Pâtisserie du Jour</span><span class="mi-price" data-en="subject to availability">selon disponibilité</span></div>
-            <p class="mi-desc" data-en="Our pastry of the day.">Notre pâtisserie du jour.</p>
+            <div class="mi-head"><span class="mi-name" data-en="Pastry of the Day" data-it="Dolce del giorno" data-es="Pastel del día">Pâtisserie du Jour</span><span class="mi-price" data-en="subject to availability" data-it="secondo disponibilità" data-es="según disponibilidad">selon disponibilité</span></div>
+            <p class="mi-desc" data-en="Our pastry of the day." data-it="Il nostro dolce del giorno." data-es="Nuestro pastel del día.">Notre pâtisserie du jour.</p>
           </li>
         </ul>
       </section>
@@ -485,12 +489,12 @@
 
   <!-- ===== AVIS ===== -->
   <section class="reviews" id="avis">
-    <p class="section-eyebrow center" data-en="Your reviews of So Good Diner">Vos avis sur So Good Diner</p>
-    <h2 class="section-title center" data-en="They came, they recommend">Ils sont venus, ils recommandent</h2>
+    <p class="section-eyebrow center" data-en="Your reviews of So Good Diner" data-it="Le vostre recensioni di So Good Diner" data-es="Vuestras opiniones sobre So Good Diner">Vos avis sur So Good Diner</p>
+    <h2 class="section-title center" data-en="They came, they recommend" data-it="Sono venuti, ci consigliano" data-es="Vinieron y nos recomiendan">Ils sont venus, ils recommandent</h2>
     <div class="reviews-grid">
       <figure class="review">
         <div class="stars" aria-label="5/5">★★★★★</div>
-        <blockquote data-en="A wonderful discovery! I had a great time: the meal was delicious, carefully made and above all homemade. The owners are the best, with a warm and family welcome. I recommend 100%. You come for the food, you stay for the welcome!">
+        <blockquote data-en="A wonderful discovery! I had a great time: the meal was delicious, carefully made and above all homemade. The owners are the best, with a warm and family welcome. I recommend 100%. You come for the food, you stay for the welcome!" data-it="Una bellissima scoperta! Mi sono trovato benissimo: il pasto era delizioso, curato e soprattutto fatto in casa. I proprietari sono fantastici, con un&#x27;accoglienza calorosa e familiare. Consiglio al 100%. Si viene per il cibo, si resta per l&#x27;accoglienza!" data-es="¡Un descubrimiento maravilloso! Lo pasé genial: la comida estaba deliciosa, bien preparada y, sobre todo, casera. Los propietarios son estupendos, con una acogida cálida y familiar. Lo recomiendo al 100%. ¡Vienes por la comida y te quedas por la acogida!">
           Une très belle découverte ! J'ai passé un excellent moment : le repas était délicieux,
           fait avec soin et surtout maison. Les patrons sont au top, avec un accueil chaleureux et familial.
           Je recommande à 100 %. On y va pour manger, on y reste pour l'accueil !
@@ -499,7 +503,7 @@
       </figure>
       <figure class="review">
         <div class="stars" aria-label="5/5">★★★★★</div>
-        <blockquote data-en="Top welcome! I never leave reviews, but this was so good that people need to know this place! Fresh products, really good homemade sauces. Whether it's taste, presentation or quantity, there's nothing to fault! I recommend +++++++">
+        <blockquote data-en="Top welcome! I never leave reviews, but this was so good that people need to know this place! Fresh products, really good homemade sauces. Whether it's taste, presentation or quantity, there's nothing to fault! I recommend +++++++" data-it="Accoglienza eccellente! Non lascio mai recensioni, ma era così buono che tutti devono conoscere questo posto! Prodotti freschi, salse fatte in casa davvero ottime. Gusto, presentazione e quantità: nulla da ridire! Consiglio +++++++" data-es="¡Acogida excelente! Nunca dejo opiniones, pero estaba tan bueno que todo el mundo debe conocer este sitio. Productos frescos y salsas caseras buenísimas. Sabor, presentación y cantidad: ¡nada que objetar! Lo recomiendo +++++++">
           Accueil au top ! Je ne laisse jamais d'avis, mais là c'était tellement bon que ça mérite que
           les gens connaissent ce lieu ! Produits frais, sauces maison super bonnes. Que ce soit au niveau
           du goût, du visuel ou de la quantité, il n'y a rien à dire ! Je recommande +++++++
@@ -508,7 +512,7 @@
       </figure>
       <figure class="review">
         <div class="stars" aria-label="5/5">★★★★★</div>
-        <blockquote data-en="I was drawn in by the existing reviews, and I'm not disappointed. An incredible welcome: one of the staff goes to fetch the bread from the bakery and the meat from the butcher. You can watch the cooks prepare the steaks. Quality at 200% — I had a real feast. Thank you so much.">
+        <blockquote data-en="I was drawn in by the existing reviews, and I'm not disappointed. An incredible welcome: one of the staff goes to fetch the bread from the bakery and the meat from the butcher. You can watch the cooks prepare the steaks. Quality at 200% — I had a real feast. Thank you so much." data-it="Le recensioni mi hanno attirato e non sono rimasto deluso. Un&#x27;accoglienza incredibile: un membro dello staff va a prendere il pane dal fornaio e la carne dal macellaio. Si possono vedere i cuochi preparare gli hamburger. Qualità al 200% — mi sono davvero goduto il pasto. Grazie mille." data-es="Las opiniones me animaron a venir y no me han decepcionado. Una acogida increíble: alguien del equipo va a buscar el pan a la panadería y la carne a la carnicería. Puedes ver a los cocineros preparar las hamburguesas. Calidad al 200% — disfruté muchísimo. Muchas gracias.">
           J'ai été attirée par les avis déjà existants, et je ne suis pas déçue. Un accueil incroyable :
           l'un des employés va chercher le pain à la boulangerie et la viande chez le boucher. On voit les
           cuistots préparer les steaks. Un gage de qualité à 200 % — je me suis régalée. Merci beaucoup.
@@ -527,8 +531,8 @@
       <svg class="deco deco--burger deco--right" style="--d:.8s"><use href="#deco-burger" /></svg>
       <svg class="deco deco--fries deco--left" style="--d:.2s"><use href="#deco-fries" /></svg>
     </div>
-    <p class="section-eyebrow center" data-en="Gallery">Galerie</p>
-    <h2 class="section-title center" data-en="Life at the diner">Ça se passe au diner</h2>
+    <p class="section-eyebrow center" data-en="Gallery" data-it="Galleria" data-es="Galería">Galerie</p>
+    <h2 class="section-title center" data-en="Life at the diner" data-it="La vita al diner" data-es="La vida en el diner">Ça se passe au diner</h2>
     <div class="gallery-grid">
       <video autoplay muted loop playsinline controls preload="metadata" poster="assets/img/hero.jpg">
         <source src="assets/video/clip-1.webm" type="video/webm" />
@@ -547,36 +551,36 @@
   <!-- ===== FAQ ===== -->
   <section class="faq" id="faq">
     <div class="faq-inner">
-      <p class="section-eyebrow center" data-en="Good to know">Bon à savoir</p>
-      <h2 class="section-title center" data-en="Frequently asked questions">Questions fréquentes</h2>
+      <p class="section-eyebrow center" data-en="Good to know" data-it="Da sapere" data-es="Conviene saber">Bon à savoir</p>
+      <h2 class="section-title center" data-en="Frequently asked questions" data-it="Domande frequenti" data-es="Preguntas frecuentes">Questions fréquentes</h2>
       <div class="faq-list">
         <details class="faq-item">
-          <summary data-en="Do I need to book?">Faut-il réserver ?</summary>
-          <div class="faq-a"><p data-en="No, walk-ins are welcome. For a group or the private room downstairs, call us on 04 94 82 36 76.">Non, vous pouvez venir sans réserver. Pour un groupe ou la salle privative au sous-sol, appelez-nous au 04 94 82 36 76.</p></div>
+          <summary data-en="Do I need to book?" data-it="Devo prenotare?" data-es="¿Hace falta reservar?">Faut-il réserver ?</summary>
+          <div class="faq-a"><p data-en="No, walk-ins are welcome. For a group or the private room downstairs, call us on 04 94 82 36 76." data-it="No, puoi venire senza prenotare. Per un gruppo o la sala privata al piano inferiore, chiamaci allo 04 94 82 36 76." data-es="No, puedes venir sin reserva. Para grupos o la sala privada de la planta inferior, llámanos al 04 94 82 36 76.">Non, vous pouvez venir sans réserver. Pour un groupe ou la salle privative au sous-sol, appelez-nous au 04 94 82 36 76.</p></div>
         </details>
         <details class="faq-item">
-          <summary data-en="Is there a private room?">Avez-vous une salle privative ?</summary>
-          <div class="faq-a"><p data-en="Yes — a private room downstairs, available on reservation. Perfect for groups, birthdays and events.">Oui — une salle privative au sous-sol, disponible sur réservation. Idéale pour les groupes, anniversaires et événements.</p></div>
+          <summary data-en="Is there a private room?" data-it="Avete una sala privata?" data-es="¿Tenéis una sala privada?">Avez-vous une salle privative ?</summary>
+          <div class="faq-a"><p data-en="Yes — a private room downstairs, available on reservation. Perfect for groups, birthdays and events." data-it="Sì — una sala privata al piano inferiore, disponibile su prenotazione. Ideale per gruppi, compleanni ed eventi." data-es="Sí — una sala privada en la planta inferior, disponible con reserva. Ideal para grupos, cumpleaños y eventos.">Oui — une salle privative au sous-sol, disponible sur réservation. Idéale pour les groupes, anniversaires et événements.</p></div>
         </details>
         <details class="faq-item">
-          <summary data-en="Do you have vegetarian options?">Proposez-vous des options végétariennes ?</summary>
-          <div class="faq-a"><p data-en="Yes: the Vegetarian Kumpir, the Veggie burger, cheese paninis and several sides.">Oui : le Kumpir Végétarien, le burger Le Veggie, les paninis fromage et plusieurs accompagnements.</p></div>
+          <summary data-en="Do you have vegetarian options?" data-it="Avete opzioni vegetariane?" data-es="¿Tenéis opciones vegetarianas?">Proposez-vous des options végétariennes ?</summary>
+          <div class="faq-a"><p data-en="Yes: the Vegetarian Kumpir, the Veggie burger, cheese paninis and several sides." data-it="Sì: il Kumpir vegetariano, il burger Veggie, i panini al formaggio e diversi contorni." data-es="Sí: el Kumpir vegetariano, la hamburguesa Veggie, paninis de queso y varias guarniciones.">Oui : le Kumpir Végétarien, le burger Le Veggie, les paninis fromage et plusieurs accompagnements.</p></div>
         </details>
         <details class="faq-item">
-          <summary data-en="Is everything homemade?">Est-ce fait maison ?</summary>
-          <div class="faq-a"><p data-en="Yes. The bread comes from the local baker every day, the fresh meat from the butcher, and our sauces are made on site.">Oui. Le pain vient chaque jour du boulanger, la viande fraîche du boucher, et nos sauces sont préparées sur place.</p></div>
+          <summary data-en="Is everything homemade?" data-it="È tutto fatto in casa?" data-es="¿Todo es casero?">Est-ce fait maison ?</summary>
+          <div class="faq-a"><p data-en="Yes. The bread comes from the local baker every day, the fresh meat from the butcher, and our sauces are made on site." data-it="Sì. Il pane arriva ogni giorno dal fornaio, la carne fresca dal macellaio e le nostre salse sono preparate sul posto." data-es="Sí. El pan viene cada día de la panadería, la carne fresca de la carnicería y nuestras salsas se preparan aquí.">Oui. Le pain vient chaque jour du boulanger, la viande fraîche du boucher, et nos sauces sont préparées sur place.</p></div>
         </details>
         <details class="faq-item">
-          <summary data-en="Is there a kids' menu?">Avez-vous un menu enfant ?</summary>
-          <div class="faq-a"><p data-en="Yes, the Kids' Meal at €8 (up to 11 years): 5 nuggets or 1 cheeseburger, Capri-Sun, fries and apple sauce.">Oui, le Menu Enfant à 8€ (jusqu'à 11 ans) : 5 nuggets ou 1 cheeseburger, Capri-Sun, frites et compote.</p></div>
+          <summary data-en="Is there a kids' menu?" data-it="Avete un menu per bambini?" data-es="¿Tenéis menú infantil?">Avez-vous un menu enfant ?</summary>
+          <div class="faq-a"><p data-en="Yes, the Kids' Meal at €8 (up to 11 years): 5 nuggets or 1 cheeseburger, Capri-Sun, fries and apple sauce." data-it="Sì, il menu bambino a 8€ (fino a 11 anni): 5 nuggets o 1 cheeseburger, Capri-Sun, patatine fritte e composta di mele." data-es="Sí, el menú infantil a 8€ (hasta 11 años): 5 nuggets o 1 cheeseburger, Capri-Sun, patatas fritas y compota de manzana.">Oui, le Menu Enfant à 8€ (jusqu'à 11 ans) : 5 nuggets ou 1 cheeseburger, Capri-Sun, frites et compote.</p></div>
         </details>
         <details class="faq-item">
-          <summary data-en="Can I get my order to take away?">Peut-on commander à emporter ?</summary>
-          <div class="faq-a"><p data-en="Yes, all our dishes are available to take away.">Oui, tous nos plats sont disponibles à emporter.</p></div>
+          <summary data-en="Can I get my order to take away?" data-it="Posso ordinare da asporto?" data-es="¿Puedo pedir para llevar?">Peut-on commander à emporter ?</summary>
+          <div class="faq-a"><p data-en="Yes, all our dishes are available to take away." data-it="Sì, tutti i nostri piatti sono disponibili da asporto." data-es="Sí, todos nuestros platos están disponibles para llevar.">Oui, tous nos plats sont disponibles à emporter.</p></div>
         </details>
         <details class="faq-item">
-          <summary data-en="What are your opening hours?">Quels sont vos horaires ?</summary>
-          <div class="faq-a"><p data-en="We're open every day from 11am to 11pm.">Nous sommes ouverts tous les jours de 11h à 23h.</p></div>
+          <summary data-en="What are your opening hours?" data-it="Quali sono i vostri orari?" data-es="¿Cuál es vuestro horario?">Quels sont vos horaires ?</summary>
+          <div class="faq-a"><p data-en="We're open every day from 11am to 11pm." data-it="Siamo aperti tutti i giorni dalle 11 alle 23." data-es="Abrimos todos los días de 11:00 a 23:00.">Nous sommes ouverts tous les jours de 11h à 23h.</p></div>
         </details>
       </div>
     </div>
@@ -588,30 +592,30 @@
   <section class="contact" id="contact">
     <figure class="contact-photo">
       <img src="assets/img/storefront.jpg" alt="Devanture du So Good Diner — 65 Rue du Général de Gaulle, Fréjus" loading="lazy" />
-      <figcaption data-en="No. 65 — see you there!">Au 65 — on vous attend !</figcaption>
+      <figcaption data-en="No. 65 — see you there!" data-it="Al numero 65 — ti aspettiamo!" data-es="En el número 65 — ¡te esperamos!">Au 65 — on vous attend !</figcaption>
     </figure>
     <div class="contact-inner">
       <div class="contact-info">
-        <p class="section-eyebrow" data-en="Find us">Nous trouver</p>
+        <p class="section-eyebrow" data-en="Find us" data-it="Come trovarci" data-es="Cómo encontrarnos">Nous trouver</p>
         <h2 class="section-title">So Good Diner · Fréjus</h2>
         <ul class="contact-list">
           <li>
-            <span class="ci-label" data-en="Address">Adresse</span>
+            <span class="ci-label" data-en="Address" data-it="Indirizzo" data-es="Dirección">Adresse</span>
             <a href="https://maps.google.com/?q=65+Rue+du+Général+de+Gaulle+83600+Fréjus" target="_blank" rel="noopener">
               65 Rue du Général de Gaulle, 83600 Fréjus
             </a>
           </li>
           <li>
-            <span class="ci-label" data-en="Reservations">Réservation</span>
+            <span class="ci-label" data-en="Reservations" data-it="Prenotazioni" data-es="Reservas">Réservation</span>
             <a href="tel:+33494823676">04 94 82 36 76</a>
           </li>
           <li>
-            <span class="ci-label" data-en="Hours">Horaires</span>
-            <span data-en="Every day · 11am – 11pm">Tous les jours · 11h – 23h</span>
+            <span class="ci-label" data-en="Hours" data-it="Orari" data-es="Horario">Horaires</span>
+            <span data-en="Every day · 11am – 11pm" data-it="Tutti i giorni · 11–23" data-es="Todos los días · 11:00–23:00">Tous les jours · 11h – 23h</span>
           </li>
           <li>
-            <span class="ci-label" data-en="Private room">Salle privative</span>
-            <span data-en="Downstairs, on reservation">Au sous-sol, sur réservation</span>
+            <span class="ci-label" data-en="Private room" data-it="Sala privata" data-es="Sala privada">Salle privative</span>
+            <span data-en="Downstairs, on reservation" data-it="Al piano inferiore, su prenotazione" data-es="En la planta inferior, con reserva">Au sous-sol, sur réservation</span>
           </li>
           <li>
             <span class="ci-label">Instagram</span>
@@ -619,8 +623,8 @@
           </li>
         </ul>
         <div class="contact-actions">
-          <a href="tel:+33494823676" class="btn btn-primary" data-en="Book a table">Réserver</a>
-          <a href="https://maps.google.com/?q=65+Rue+du+Général+de+Gaulle+83600+Fréjus" target="_blank" rel="noopener" class="btn btn-ghost" data-en="Directions">Itinéraire</a>
+          <a href="tel:+33494823676" class="btn btn-primary" data-en="Book a table" data-it="Prenota" data-es="Reservar">Réserver</a>
+          <a href="https://maps.google.com/?q=65+Rue+du+Général+de+Gaulle+83600+Fréjus" target="_blank" rel="noopener" class="btn btn-ghost" data-en="Directions" data-it="Indicazioni" data-es="Cómo llegar">Itinéraire</a>
         </div>
       </div>
       <div class="contact-map">
@@ -641,15 +645,15 @@
     </div>
     <p class="footer-address">65 Rue du Général de Gaulle, 83600 Fréjus</p>
     <nav class="footer-nav" aria-label="Pied de page">
-      <a href="#carte" data-en="Menu">La Carte</a>
-      <a href="#avis" data-en="Reviews">Avis</a>
-      <a href="#faq" data-en="FAQ">FAQ</a>
-      <a href="#contact" data-en="Contact">Contact</a>
+      <a href="#carte" data-en="Menu" data-it="Menu" data-es="Carta">La Carte</a>
+      <a href="#avis" data-en="Reviews" data-it="Recensioni" data-es="Opiniones">Avis</a>
+      <a href="#faq" data-en="FAQ" data-it="FAQ" data-es="Preguntas frecuentes">FAQ</a>
+      <a href="#contact" data-en="Contact" data-it="Contatti" data-es="Contacto">Contact</a>
       <a href="https://www.instagram.com/sogooddiner83" target="_blank" rel="noopener">Instagram</a>
     </nav>
-    <p class="footer-legal" data-en="© <span id=&quot;year&quot;></span> So Good Diner — All rights reserved.">© <span id="year"></span> So Good Diner — Tous droits réservés.</p>
+    <p class="footer-legal" data-en="© <span id=&quot;year&quot;></span> So Good Diner — All rights reserved." data-it="© &lt;span id=&quot;year&quot;&gt;&lt;/span&gt; So Good Diner — Tutti i diritti riservati." data-es="© &lt;span id=&quot;year&quot;&gt;&lt;/span&gt; So Good Diner — Todos los derechos reservados.">© <span id="year"></span> So Good Diner — Tous droits réservés.</p>
   </footer>
 
-  <script src="script.js?v=20261007154703"></script>
+  <script src="script.js?v=20261007languages"></script>
 </body>
 </html>
