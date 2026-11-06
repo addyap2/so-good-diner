@@ -755,6 +755,9 @@ section { position: relative; }
 }
 .footer-nav a:hover { color: var(--gold); }
 .footer-legal { color: var(--muted-2); font-size: 0.78rem; margin-top: 1.75rem; }
+.footer-credit { color: var(--muted-2); font-size: 0.74rem; margin-top: 0.5rem; }
+.footer-credit a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.footer-credit a:hover { color: #fff; }
 
 /* ===== REVEAL ANIMATION ===== */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
